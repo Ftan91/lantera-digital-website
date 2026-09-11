@@ -371,20 +371,19 @@ section.soft { background: var(--color-bg-soft); }
   align-items: center;
   justify-content: center;
   gap: 10px;
-  width: 56px;
   height: 56px;
+  min-width: 56px;
+  padding: 0 14px;
   margin-bottom: var(--space-xs);
   border-radius: 12px;
   background: #ffffff;
   border: 1px solid var(--color-border);
 }
-.tech-logo img { width: 28px; height: 28px; }
+/* Height-fixed, width auto: handles square marks and wider icon+wordmark
+   lockups (e.g. Databricks) without distorting either. */
+.tech-logo img { height: 28px; width: auto; max-width: 140px; }
 
-.tech-logo.multi {
-  width: auto;
-  padding: 0 var(--space-xs);
-}
-.tech-logo.multi img { width: 24px; height: 24px; }
+.tech-logo.multi img { height: 24px; }
 
 .service-card .service-link {
   display: inline-block;
