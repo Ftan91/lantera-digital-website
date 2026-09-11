@@ -135,7 +135,11 @@ section.soft { background: var(--color-bg-soft); }
   padding-bottom: var(--space-sm);
 }
 
-.logo img { display: block; height: 32px; width: auto; }
+/* logo-mark.njk is inlined (not an <img>) so its navy strokes/fills can
+   use currentColor and follow --color-navy into dark mode automatically. */
+.logo-mark { display: block; height: 32px; width: auto; color: var(--color-navy); }
+
+.footer-logo .logo-mark { height: 26px; color: var(--color-navy); }
 
 .nav-links {
   display: flex;
