@@ -1,5 +1,7 @@
 # Lantera Digital Website
 
+Live at [lanteradigital.com](https://lanteradigital.com) (lanteradigital.com.my redirects to it).
+
 The marketing website for Lantera Digital, a Malaysian data and AI consultancy. Three service lines: Data & AI Training, Data Platform Services, and AI Offerings.
 
 Static site, built with [Eleventy (11ty)](https://www.11ty.dev/), plain HTML/CSS/JS, no client side framework. All page content lives in YAML data files, not in the templates, so copy can be edited without touching any code.
@@ -46,8 +48,12 @@ src/
   *.njk         Page templates
 ```
 
+## Deployment
+
+Every push to `main` builds the site and deploys it to GitHub Pages automatically, via `.github/workflows/deploy.yml`. `lanteradigital.com` is the canonical domain GitHub Pages serves (HTTPS enforced); `lanteradigital.com.my` is a separate registrar level redirect to the same site, not a GitHub Pages concern. See `CLAUDE.md` for the full DNS/domain setup notes.
+
 ## Status
 
-Static foundation only right now, no backend, no DNS registered yet. See `CLAUDE.md` for the fuller architecture notes and the roadmap (analytics backend, CI/CD).
+Static site, no backend yet. See `CLAUDE.md` for the fuller architecture notes and the roadmap (analytics backend, fuller CI/CD).
 
 This project is also being used as a hands on way to learn Claude Code's tooling (CLAUDE.md, agents, skills, and so on) alongside building the actual site.

@@ -4,9 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-The marketing website for Lantera Digital, a Malaysia-based Data & AI consultancy (three service lines: Data & AI Training, Data Platform Services, AI Offerings). Static site only for now — no backend yet, no DNS registered, developed and verified on localhost.
+The marketing website for Lantera Digital, a Malaysia-based Data & AI consultancy (three service lines: Data & AI Training, Data Platform Services, AI Offerings). Static site, no backend yet (see Roadmap).
 
-Repo: https://github.com/Ftan91/lantera-digital-website (public). Live at https://lanteradigital.com via GitHub Pages; lanteradigital.com.my redirects to it at the registrar level (not a GitHub concern).
+Repo: https://github.com/Ftan91/lantera-digital-website (public). Live at https://lanteradigital.com via GitHub Pages, HTTPS enforced. `lanteradigital.com.my` is meant to redirect to it at the registrar level (not a GitHub concern) — check `gh api repos/Ftan91/lantera-digital-website/pages` and a DNS lookup on `lanteradigital.com.my` if unsure whether that forwarding has actually been set up, it wasn't done as of the last check in this project's history.
 
 ## Commands
 
@@ -16,7 +16,7 @@ npm run dev        # start Eleventy dev server with live reload at http://localh
 npm run build       # build the static site into _site/
 ```
 
-There is no separate lint/test command yet — this is a plain static site with no backend or CI pipeline in place (see Roadmap below).
+There is no separate lint/test command yet. `.github/workflows/deploy.yml` builds and deploys on push to `main` (see Deployment below), but there's no lint/test/security CI yet — that's still on the Roadmap.
 
 ## Architecture
 
@@ -64,9 +64,11 @@ No fabricated client names, logos, or testimonials — leave those sections out 
 
 ## Deployment
 
-`.github/workflows/deploy.yml` builds the site with `npm run build` and deploys `_site/` to GitHub Pages via the official `actions/upload-pages-artifact` + `actions/deploy-pages` actions, on every push to `main` (also runnable manually via `workflow_dispatch`). `src/CNAME` (passthrough copied to `_site/CNAME`) holds the custom domain, `lanteradigital.com`. GitHub Pages is enabled with source `workflow` in the repo's Pages settings, and the custom domain plus HTTPS enforcement are set there too.
+**Live at https://lanteradigital.com.** `.github/workflows/deploy.yml` builds the site with `npm run build` and deploys `_site/` to GitHub Pages via the official `actions/upload-pages-artifact` + `actions/deploy-pages` actions, on every push to `main` (also runnable manually via `workflow_dispatch`). `src/CNAME` (passthrough copied to `_site/CNAME`) holds the custom domain, `lanteradigital.com`. GitHub Pages is enabled with source `workflow`; custom domain and HTTPS enforcement are also set via the Pages API/settings, not in this repo's files.
 
-**Two-domain setup:** `lanteradigital.com` is canonical and is what GitHub Pages actually serves (A records pointing at GitHub's Pages IPs). `lanteradigital.com.my` is not a GitHub concern at all, it's set up as a registrar-level redirect (domain forwarding) straight to `https://lanteradigital.com`, so both domains land visitors on the same canonical site.
+**Two-domain setup:** `lanteradigital.com` is canonical and is what GitHub Pages actually serves. DNS for it: four `A` records at the apex pointing at GitHub's Pages IPs (185.199.108.153, .109.153, .110.153, .111.153), plus a `www` `CNAME` to `ftan91.github.io`. `lanteradigital.com.my` is not a GitHub concern at all, it's a registrar-level redirect (domain forwarding) straight to `https://lanteradigital.com`, configured at that domain's registrar, not here.
+
+**Repo/Pages status can be checked directly** without opening a browser: `gh api repos/Ftan91/lantera-digital-website/pages --jq '{cname, https_enforced, cert_state: .https_certificate.state}'` shows whether the custom domain and HTTPS are live; `node -e 'require("dns").promises.resolve4("lanteradigital.com").then(console.log)'` checks DNS resolution independent of GitHub. If `https_enforced` is `false` but DNS is already correct, it's normal, GitHub still needs to verify DNS and issue the Let's Encrypt certificate (minutes to about a day for a freshly pointed domain); once `https_certificate.state` is `"approved"`, flip it on with `gh api repos/Ftan91/lantera-digital-website/pages -X PUT -F https_enforced=true` (note `-F` not `-f`, the field is a boolean). A "server cannot be found" error on one specific device after that point is DNS propagation lag on that device's resolver (carrier/WiFi), not a site problem, ask them to try a different network or wait.
 
 ## Roadmap (not built yet)
 
