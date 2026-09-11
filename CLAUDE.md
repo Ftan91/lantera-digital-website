@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 The marketing website for Lantera Digital, a Malaysia-based Data & AI consultancy (three service lines: Data & AI Training, Data Platform Services, AI Offerings). Static site only for now — no backend yet, no DNS registered, developed and verified on localhost.
 
-Repo: https://github.com/Ftan91/lantera-digital-website (private).
+Repo: https://github.com/Ftan91/lantera-digital-website (public). Live at https://lanteradigital.com via GitHub Pages; lanteradigital.com.my redirects to it at the registrar level (not a GitHub concern).
 
 ## Commands
 
@@ -62,7 +62,13 @@ No fabricated client names, logos, or testimonials — leave those sections out 
 
 **Tone:** informal, warm, and lightly Malaysian (Manglish touches like "lah" are fine in small doses), not corporate boilerplate. Avoid the AI-writing tells: no em dashes or en dashes, no "it's not X, it's Y" contrast framing, no hyphens used as punctuation (rephrase instead, e.g. "start to finish" not "end-to-end"). Hyphens are still fine inside real identifiers (URL slugs, file names). Write like a person who actually works here, not like a brochure.
 
+## Deployment
+
+`.github/workflows/deploy.yml` builds the site with `npm run build` and deploys `_site/` to GitHub Pages via the official `actions/upload-pages-artifact` + `actions/deploy-pages` actions, on every push to `main` (also runnable manually via `workflow_dispatch`). `src/CNAME` (passthrough copied to `_site/CNAME`) holds the custom domain, `lanteradigital.com`. GitHub Pages is enabled with source `workflow` in the repo's Pages settings, and the custom domain plus HTTPS enforcement are set there too.
+
+**Two-domain setup:** `lanteradigital.com` is canonical and is what GitHub Pages actually serves (A records pointing at GitHub's Pages IPs). `lanteradigital.com.my` is not a GitHub concern at all, it's set up as a registrar-level redirect (domain forwarding) straight to `https://lanteradigital.com`, so both domains land visitors on the same canonical site.
+
 ## Roadmap (not built yet)
 
 - **Analytics backend:** Express + `better-sqlite3` (single-file DB), a JS tracking snippet for page views/time-on-page/clicks, `/api/track` endpoint, minimal `/dashboard` page. IP geolocation deferred until there's a real deployment.
-- **CI/CD (GitHub Actions):** lint (ESLint + a small YAML-parses-cleanly check script), unit tests (Node's built-in `node:test`), an integration smoke test against the built site + API, `npm audit` + Dependabot, and the official Claude Code GitHub Action for automated PR review.
+- **CI/CD (GitHub Actions):** lint (ESLint + a small YAML-parses-cleanly check script), unit tests (Node's built-in `node:test`), an integration smoke test against the built site + API, `npm audit` + Dependabot, and the official Claude Code GitHub Action for automated PR review. (The deploy workflow above covers the build/deploy step only, not lint/test/security yet.)
