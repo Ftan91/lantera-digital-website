@@ -135,11 +135,16 @@ section.soft { background: var(--color-bg-soft); }
   padding-bottom: var(--space-sm);
 }
 
+/* Never let the flex row squeeze the logo to nothing on a narrow header. */
+.logo { flex-shrink: 0; }
+
 /* logo-mark.njk is inlined (not an <img>) so its navy strokes/fills can
-   use currentColor and follow --color-navy into dark mode automatically. */
+   use currentColor and follow --color-navy into dark mode automatically.
+   width/height attributes on the <svg> itself (in the partial) give it an
+   unambiguous intrinsic size so these CSS values reliably win everywhere. */
 .logo-mark { display: block; height: 32px; width: auto; color: var(--color-navy); }
 
-.footer-logo .logo-mark { height: 26px; color: var(--color-navy); }
+.footer-logo .logo-mark { height: 26px; width: auto; color: var(--color-navy); }
 
 .nav-links {
   display: flex;
