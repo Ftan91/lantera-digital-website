@@ -16,6 +16,17 @@ permalink: /technology/
     <div class="grid">
       {% for item in technology.stack %}
       <div class="card">
+        {% if item.logos %}
+        <div class="tech-logo{% if item.logos.length > 1 %} multi{% endif %}">
+          {% for logo in item.logos %}
+          <img src="{{ logo }}" alt="">
+          {% endfor %}
+        </div>
+        {% elif item.icon == "custom" %}
+        <span class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m8 9-4 3 4 3M16 9l4 3-4 3M13 6l-2 12"/></svg>
+        </span>
+        {% endif %}
         <h3>{{ item.name }}</h3>
         <p>{{ item.blurb }}</p>
       </div>
