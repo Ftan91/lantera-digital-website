@@ -66,4 +66,3 @@ No fabricated client names, logos, or testimonials — leave those sections out 
 
 - **Analytics backend:** Express + `better-sqlite3` (single-file DB), a JS tracking snippet for page views/time-on-page/clicks, `/api/track` endpoint, minimal `/dashboard` page. IP geolocation deferred until there's a real deployment.
 - **CI/CD (GitHub Actions):** lint (ESLint + a small YAML-parses-cleanly check script), unit tests (Node's built-in `node:test`), an integration smoke test against the built site + API, `npm audit` + Dependabot, and the official Claude Code GitHub Action for automated PR review.
-- Full plan detail for the current foundation phase: `/Users/weeliptan/.claude/plans/parallel-baking-boot.md`.
