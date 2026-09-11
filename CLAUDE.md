@@ -6,6 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 The marketing website for Lantera Digital, a Malaysia-based Data & AI consultancy (three service lines: Data & AI Training, Data Platform Services, AI Offerings). Static site only for now — no backend yet, no DNS registered, developed and verified on localhost.
 
+Repo: https://github.com/Ftan91/lantera-digital-website (private).
+
 ## Commands
 
 ```
@@ -49,6 +51,8 @@ Templates only ever reference this data (e.g. `{{ site.name }}`, `{% for service
 ## Project philosophy
 
 The user has explicitly asked to keep this project **as light and easy to understand as possible** — avoid complexity, prefer built-ins and the smallest well-known tool over a framework, even where a more "capable" option exists. When adding anything new, default to the option with fewer moving parts.
+
+**Before making a visual design or content-structure decision** (a new page layout, a hero treatment, section rhythm, how to show a list of things), check how these 5 reference consultancy sites handle the equivalent thing, rather than designing from generic first principles: [aimpointdigital.com](https://www.aimpointdigital.com), [colibridigital.io](https://www.colibridigital.io), [vivanti.com](https://www.vivanti.com), [dufrain.co.uk](https://www.dufrain.co.uk), [datapao.com](https://datapao.com). The user gave these as the explicit design reference for this site and has asked for them to always be consulted, not just once at the start.
 
 This project is also being used to deliberately learn Claude Code's tooling (CLAUDE.md, subagents, skills, MCP, hooks, etc.), but only where a mechanism earns its place — not for its own sake. Current state: **CLAUDE.md is the only Claude Code mechanism in use.** No MCP servers, custom subagents, skills, or hooks are configured, because nothing in this static-site foundation needs them. This section will be updated honestly as later phases (see Roadmap) add something real — e.g. the CI/CD phase is expected to add the official Claude Code GitHub Action for automated PR review, which will be documented here once it exists.
 
