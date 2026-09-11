@@ -1,0 +1,30 @@
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <img src="/assets/logo.svg" alt="{{ site.name }}" style="height: 26px;">
+      <p>{{ site.footer.tagline }}</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p>
+        <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a><br>
+        <a href="{{ site.contact.linkedin }}">LinkedIn</a>
+      </p>
+    </div>
+    <div>
+      <h3>Explore</h3>
+      <ul class="footer-links">
+        {% for item in site.nav %}
+          {% if item.url %}
+          <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+          {% elif item.dropdown %}
+            {% for sub in item.dropdown %}
+            <li><a href="{{ sub.url }}">{{ sub.label }}</a></li>
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    <p class="footer-copyright">© {{ currentYear }} {{ site.footer.copyright_holder }} · {{ site.footer.location }}</p>
+  </div>
+</footer>

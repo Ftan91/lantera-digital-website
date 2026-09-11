@@ -1,0 +1,56 @@
+---
+layout: layouts/base.njk
+title: Data & AI Consultancy
+description: "Malaysian data and AI consultancy, training, data platforms, and applied AI."
+---
+<section class="hero">
+  <div class="container">
+    <h1>{{ home.hero.heading }}</h1>
+    <p class="subheading">{{ home.hero.subheading }}</p>
+    <div class="btn-group">
+      <a class="btn btn-primary" href="{{ home.hero.primary_cta.url }}">{{ home.hero.primary_cta.label }}</a>
+      <a class="btn btn-secondary" href="{{ home.hero.secondary_cta.url }}">{{ home.hero.secondary_cta.label }}</a>
+    </div>
+    <p class="subheading" style="margin-top: var(--space-md); font-size: 1rem;">{{ home.intro }}</p>
+  </div>
+</section>
+
+<section class="soft">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Why Lantera Digital</h2>
+    </div>
+    <div class="grid">
+      {% for item in home.differentiators %}
+      <div class="card">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.body }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-heading">
+      <h2>{{ home.approach_heading }}</h2>
+    </div>
+    <div class="steps">
+      {% for step in home.approach %}
+      <div class="step">
+        <h3>{{ step.title }}</h3>
+        <p>{{ step.body }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>{{ site.cta.heading }}</h2>
+    <p>{{ site.cta.body }}</p>
+    <a class="btn btn-primary" href="{{ site.cta.button_url }}">{{ site.cta.button_label }}</a>
+  </div>
+</section>

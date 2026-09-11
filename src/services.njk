@@ -1,0 +1,81 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: services
+  size: 1
+  alias: service
+permalink: "/services/{{ service.slug }}/"
+eleventyComputed:
+  title: "{{ service.name }}"
+  description: "{{ service.summary }}"
+---
+<section class="page-hero">
+  <div class="container">
+    {% set iconSize = "large" %}
+    {% include "partials/service-icon.njk" %}
+    <h1>{{ service.hero_heading }}</h1>
+    <p>{{ service.hero_body }}</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-heading">
+      <h2>Who it's for</h2>
+      <p>{{ service.who_its_for }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="soft">
+  <div class="container">
+    <div class="section-heading">
+      <h2>What's included</h2>
+    </div>
+    <div class="grid">
+      {% for item in service.offerings %}
+      <div class="card">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.body }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-heading">
+      <h2>Our approach</h2>
+    </div>
+    <div class="steps">
+      {% for step in service.approach %}
+      <div class="step">
+        <h3>{{ step.title }}</h3>
+        <p>{{ step.body }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="soft">
+  <div class="container" style="max-width: 640px;">
+    <div class="section-heading">
+      <h2>What you get</h2>
+    </div>
+    <ul class="plain-list">
+      {% for outcome in service.outcomes %}
+      <li>{{ outcome }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>{{ site.cta.heading }}</h2>
+    <p>{{ site.cta.body }}</p>
+    <a class="btn btn-primary" href="{{ site.cta.button_url }}">{{ site.cta.button_label }}</a>
+  </div>
+</section>

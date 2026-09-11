@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title %}{{ title }} | {% endif %}{{ site.name }}</title>
+  <meta name="description" content="{{ description or site.description }}">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <!-- Must run inline, before the stylesheet paints, or returning light-mode visitors see a flash of dark mode. -->
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem("lantera-theme") === "light") {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  {% include "partials/nav.njk" %}
+
+  <main>
+    {{ content | safe }}
+  </main>
+
+  {% include "partials/footer.njk" %}
+
+  <script src="/js/theme-toggle.js"></script>
+</body>
+</html>

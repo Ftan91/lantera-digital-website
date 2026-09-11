@@ -1,0 +1,25 @@
+---
+layout: layouts/base.njk
+title: Contact
+description: "Get in touch with Lantera Digital."
+permalink: /contact/
+---
+<section class="page-hero">
+  <div class="container">
+    <h1>Let's talk about your data.</h1>
+    <p>{{ site.cta.body }}</p>
+  </div>
+</section>
+
+<section>
+  <div class="container" style="max-width: 560px;">
+    <div class="card">
+      <h3>Email</h3>
+      <p><a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></p>
+      <h3>LinkedIn</h3>
+      <p><a href="{{ site.contact.linkedin }}">{{ site.contact.linkedin }}</a></p>
+      <h3>Based in</h3>
+      <p>{{ site.footer.location }}</p>
+    </div>
+  </div>
+</section>

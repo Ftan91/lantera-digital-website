@@ -1,0 +1,62 @@
+hero_heading: About Lantera Digital
+hero_body: >-
+  We're a data and AI consultancy based in Malaysia, working with
+  organisations who want real value from their data, not another slide
+  deck about digital transformation.
+
+mission_heading: Why the name Lantera
+mission_body: >-
+  A lantera is a lantern, something that lights the way instead of just
+  producing light for the sake of it. That's how we think about data and
+  AI too, tools that should make the road ahead clearer for the people
+  actually making the decisions.
+
+approach_heading: How we think about consulting
+approach_body: >-
+  We're wary of consultancies that leave a client more dependent on them
+  than before. Every engagement, training, platform, or AI, is built so
+  your team understands and can own what we deliver. We'd rather do fewer
+  things properly and hand them over cleanly than sell you more than you
+  need.
+
+principles:
+  - title: Outcomes over output
+    body: We measure success by the decisions our work actually enables, not the number of slides in the final deck.
+  - title: Regional context
+    body: We understand the data maturity, talent market, and business context of working in Malaysia and the wider region, because we live here too.
+  - title: No vendor bias
+    body: We recommend whatever platform or approach actually fits you, not whichever one we get a kickback for selling.
+
+founders_heading: Who's behind it
+founders_intro: >-
+  Two engineering directors, one based in Kuala Lumpur and one in London,
+  who got tired of seeing data projects go nowhere and decided to fix
+  that themselves.
+
+founders:
+  - name: Finn Tan Wee Lip
+    title: Engineering Director & Co-Founder
+    linkedin: https://www.linkedin.com/in/finn-tan-wee-lip-4b773084/
+    photo: /assets/founders/finn.jpeg
+    bio: >-
+      Finn is a data engineer originally from Malaysia, now based in
+      London, where he's spent years building data platforms and picking
+      up a small mountain of Databricks certifications along the way.
+      He's worked on modern data engineering at UBDS Group, speaks
+      regularly at data community events, and still finds time to explain
+      Spark to people at conferences. Bilingual in English and Malay, he
+      brings a very hands on, no nonsense approach to how Lantera Digital
+      builds things.
+  - name: Irfan Noordin
+    title: Engineering Director & Co-Founder
+    linkedin: https://www.linkedin.com/in/irfan-noordin/
+    photo: /assets/founders/irfan.jpeg
+    bio: >-
+      Irfan is a data scientist based in Kuala Lumpur with an engineering
+      background from McMaster University. He's worked on digital
+      transformation at Sime Darby Plantation and SD Guthrie Berhad,
+      previously served as Dean at School of AI Kuala Lumpur teaching
+      machine learning to anyone willing to sit through his slides, and
+      helps organise the Data Council community here. He's the one making
+      sure Lantera Digital's AI work actually makes sense for how
+      Malaysian businesses operate.

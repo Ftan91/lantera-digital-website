@@ -1,0 +1,104 @@
+- id: training
+  slug: training
+  name: Data & AI Training
+  summary: >-
+    Practical training where your team leaves actually knowing how to use
+    the tools, every session is hands on.
+  icon: training
+  hero_heading: Build a team that's actually good with data and AI
+  hero_body: >-
+    We run hands on training for analysts, engineers, and leaders, built
+    around your own data and your own tools. No generic slide decks copied
+    from a textbook.
+  who_its_for: >-
+    Teams who want their people properly capable with data and AI, from
+    someone touching SQL for the first time to engineers picking up a
+    brand new platform.
+  offerings:
+    - title: Data fundamentals
+      body: SQL, data modelling, and just plain good analytics thinking, for teams starting from scratch.
+    - title: AI and LLM literacy
+      body: Practical workshops on actually using AI tools well and safely, no hype, no fear mongering.
+    - title: Platform specific upskilling
+      body: Training built around whatever platform your team is already running on.
+  approach:
+    - title: Assess
+      body: We check where your team's skills actually are today, no assumptions.
+    - title: Tailor
+      body: Course content built around your real data and workflows, not made up examples.
+    - title: Deliver
+      body: Hands on sessions where your team leaves having actually built something real.
+  outcomes:
+    - A team that can work with data confidently, without needing us hovering around
+    - Training materials your team keeps and can reuse anytime
+    - A clear picture of where the skill gaps still are
+
+- id: data-platform
+  slug: data-platform
+  name: Data Platform Services
+  summary: >-
+    Solid, reliable data platforms, built and handed over properly so your
+    team can actually run it.
+  icon: platform
+  hero_heading: Data platforms built to be handed over properly
+  hero_body: >-
+    We design and build data platforms, pipelines, warehousing, governance,
+    the works, with your team involved from day one so it's genuinely
+    yours when we're done.
+  who_its_for: >-
+    Organisations that need a proper data foundation, whether you're
+    starting from spreadsheets and scattered systems, or fixing a platform
+    that's already giving everyone headaches.
+  offerings:
+    - title: Platform architecture
+      body: A data platform sized to your actual scale and budget, not the vendor's dream roadmap.
+    - title: Pipelines and integration
+      body: Reliable pipelines pulling and shaping data from your source systems, properly.
+    - title: Governance and quality
+      body: Practical data quality, access, and governance that doesn't slow your team down.
+  approach:
+    - title: Audit
+      body: We map out your current data landscape and where it's costing you time or trust.
+    - title: Design
+      body: A platform architecture sized to what you actually need, nothing more, nothing less.
+    - title: Build and handover
+      body: We build alongside your team and write everything down, so the platform is genuinely yours to run.
+  outcomes:
+    - A data platform your team actually understands and can maintain
+    - Faster, more trustworthy access to data across the business
+    - Proper documentation instead of one person who knows everything and might quit next month
+
+- id: ai-offerings
+  slug: ai-offerings
+  name: AI Offerings
+  summary: >-
+    Applied AI built around a real business problem, from first idea to
+    something running in production.
+  icon: ai
+  hero_heading: AI that solves a real problem, start to finish
+  hero_body: >-
+    We help you go from "we should probably use AI for this" to an actual
+    working system, scoped honestly, built responsibly, and measured
+    against outcomes that matter to your business.
+  who_its_for: >-
+    Teams with a specific problem in mind, forecasting, automation,
+    search, document understanding, or a custom AI assistant, who want a
+    partner willing to say when AI isn't the right tool too.
+  offerings:
+    - title: Use case scoping
+      body: An honest look at whether AI is even the right tool here, and what success actually looks like.
+    - title: Proof of concept
+      body: A fast, focused build to check feasibility before you commit real budget to it.
+    - title: Production AI systems
+      body: Taking a validated idea to a reliable, monitored system your team can actually operate.
+  approach:
+    - title: Scope
+      body: We define the problem and what success looks like before writing a single line of code.
+    - title: Prototype
+      body: A working proof of concept, tested against your real data, not a demo dataset.
+    - title: Productionise
+      body: Hardening, monitoring, and handover so the system keeps working long after we leave.
+  outcomes:
+    - A working AI system tied to an outcome that actually matters to your business
+    - Clarity on where AI does, and honestly does not, make sense for you
+    - A system your team can monitor and maintain without calling us every week

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 70" role="img" aria-label="Lantera Digital">
+  <defs>
+    <radialGradient id="logo-glow" cx="45%" cy="32%" r="75%">
+      <stop offset="0%" stop-color="#FFEAB0"/>
+      <stop offset="45%" stop-color="#F6A620"/>
+      <stop offset="100%" stop-color="#C97A12"/>
+    </radialGradient>
+  </defs>
+
+  <g transform="translate(0, 2)">
+    <path d="M32 6 C 38 6, 42 9, 42 13" fill="none" stroke="#123047" stroke-width="3" stroke-linecap="round"/>
+    <polygon points="54,38 43,19 21,19 10,38 21,57 43,57" fill="url(#logo-glow)"/>
+    <line x1="43" y1="19" x2="43" y2="57" stroke="#123047" stroke-width="1" opacity="0.25"/>
+    <line x1="21" y1="19" x2="21" y2="57" stroke="#123047" stroke-width="1" opacity="0.25"/>
+    <rect x="26" y="57" width="12" height="6" rx="2" fill="#123047"/>
+  </g>
+
+  <text x="70" y="42" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#123047">Lantera</text>
+  <text x="188" y="42" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="26" font-weight="400" fill="#C97A12">Digital</text>
+</svg>

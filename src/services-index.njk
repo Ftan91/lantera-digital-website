@@ -1,0 +1,22 @@
+---
+layout: layouts/base.njk
+title: Our Services
+description: "The three ways Lantera Digital works with you: training, data platforms, and AI."
+permalink: /services/
+---
+<section class="page-hero">
+  <div class="container">
+    <h1>Our Services</h1>
+    <p>Three ways we work with you. Pick whichever matches your current headache, or talk to us if you're not sure.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="grid">
+      {% for service in services %}
+        {% include "partials/service-card.njk" %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

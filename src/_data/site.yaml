@@ -1,0 +1,43 @@
+name: Lantera Digital
+tagline: Malaysia's data and AI consultancy
+description: >-
+  Lantera Digital helps teams turn messy data into decisions that actually
+  make sense, through proper training, solid data platforms, and AI that
+  works in the real world.
+
+nav:
+  - label: Home
+    url: /
+  - label: Our Services
+    dropdown:
+      - label: Data & AI Training
+        url: /services/training/
+      - label: Data Platform Services
+        url: /services/data-platform/
+      - label: AI Offerings
+        url: /services/ai-offerings/
+  - label: Technology
+    url: /technology/
+  - label: Case Studies
+    url: /case-studies/
+  - label: About
+    url: /about/
+  - label: Contact
+    url: /contact/
+
+footer:
+  tagline: Lighting the way from data to decisions, one project at a time.
+  copyright_holder: Lantera Digital
+  location: Kuala Lumpur, Malaysia
+
+contact:
+  email: hello@lanteradigital.com
+  linkedin: https://www.linkedin.com/company/lantera-digital
+
+cta:
+  heading: Let's talk about your data.
+  body: >-
+    Tell us where you're stuck, training, platform, or AI lah, and we'll
+    give you a straight answer. No sales fluff, promise.
+  button_label: Get in touch
+  button_url: /contact/

@@ -1,0 +1,71 @@
+---
+layout: layouts/base.njk
+title: About
+description: "About Lantera Digital, a Malaysian data and AI consultancy."
+permalink: /about/
+---
+<section class="page-hero">
+  <div class="container">
+    <h1>{{ about.hero_heading }}</h1>
+    <p>{{ about.hero_body }}</p>
+  </div>
+</section>
+
+<section>
+  <div class="container" style="max-width: 720px;">
+    <h2>{{ about.mission_heading }}</h2>
+    <p>{{ about.mission_body }}</p>
+  </div>
+</section>
+
+<section class="soft">
+  <div class="container" style="max-width: 720px;">
+    <h2>{{ about.approach_heading }}</h2>
+    <p>{{ about.approach_body }}</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-heading">
+      <h2>What we value</h2>
+    </div>
+    <div class="grid">
+      {% for principle in about.principles %}
+      <div class="card">
+        <h3>{{ principle.title }}</h3>
+        <p>{{ principle.body }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="soft">
+  <div class="container">
+    <div class="section-heading">
+      <h2>{{ about.founders_heading }}</h2>
+      <p>{{ about.founders_intro }}</p>
+    </div>
+    <div class="founders">
+      {% for founder in about.founders %}
+      <div class="founder-card">
+        <img class="founder-photo" src="{{ founder.photo }}" alt="{{ founder.name }}">
+        <div>
+          <h3>{{ founder.name }}</h3>
+          <p class="founder-title">{{ founder.title }} · <a href="{{ founder.linkedin }}">LinkedIn</a></p>
+          <p>{{ founder.bio }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>{{ site.cta.heading }}</h2>
+    <p>{{ site.cta.body }}</p>
+    <a class="btn btn-primary" href="{{ site.cta.button_url }}">{{ site.cta.button_label }}</a>
+  </div>
+</section>

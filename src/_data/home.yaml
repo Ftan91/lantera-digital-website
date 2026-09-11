@@ -1,0 +1,37 @@
+hero:
+  heading: Turn your data into decisions you can actually trust.
+  subheading: >-
+    Lantera Digital is a Malaysian data and AI consultancy. We train your
+    people, build your data platform, and deliver AI that solves real
+    problems, start to finish.
+  primary_cta:
+    label: See our services
+    url: /services/
+  secondary_cta:
+    label: Talk to us
+    url: /contact/
+
+intro: >-
+  Not sure where to start? Our services are up in the menu bar, have a
+  look and pick whichever one matches your current headache.
+
+differentiators:
+  - title: We actually get our hands dirty
+    body: Every project runs on your real data and your real tools. No generic slideshows, no textbook case studies.
+  - title: We build it so you can run it
+    body: Everything comes with proper documentation and training, so your team owns it once we're done, not us.
+  - title: Straight talk, always
+    body: If AI or some flashy new platform isn't right for you, we'll say so before you spend a single ringgit on it.
+  - title: Malaysian, and we know the region
+    body: We're based here, we understand the market here, and honestly, we reply to emails fast too.
+
+approach_heading: How we work
+approach:
+  - title: Understand
+    body: We sit down, ask a lot of questions, and figure out what's really going on with your data.
+  - title: Scope honestly
+    body: A clear plan and a price that matches what you actually need, no bloated proposals.
+  - title: Build alongside you
+    body: Your team works with us the whole way, so nothing feels like a black box handed down from above.
+  - title: Hand over
+    body: We write it down properly and train your people, so everything keeps running long after we're gone.

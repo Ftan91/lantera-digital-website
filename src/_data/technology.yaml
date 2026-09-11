@@ -1,0 +1,26 @@
+hero_heading: Technology we work with
+hero_body: >-
+  We're not tied to one vendor, we pick whatever stack actually fits your
+  business. These are the tools we reach for most often.
+
+stack:
+  - name: Databricks
+    blurb: >-
+      Our default choice for the lakehouse when a client needs data
+      engineering, analytics, and AI to live in one place. If your
+      platform already runs on Databricks, we'll feel right at home.
+  - name: Microsoft Fabric & Power BI
+    blurb: >-
+      For teams already living in the Microsoft world, we build on Fabric
+      and Power BI so reporting and data engineering sit under one roof,
+      and nobody has to learn five new tools at once.
+  - name: Anthropic Claude
+    blurb: >-
+      Our go to model family for building AI assistants and agents that
+      need to actually reason about your data, not just autocomplete a
+      sentence.
+  - name: Custom & open source tooling
+    blurb: >-
+      Python, dbt, Airflow, and whatever else genuinely fits the job.
+      We're not precious about tools, we use what solves your problem
+      best.

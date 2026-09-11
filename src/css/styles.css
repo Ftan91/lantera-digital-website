@@ -1,0 +1,524 @@
+/* ---------- Design tokens ---------- */
+/* Dark is the default theme (bare :root). Light is the opt in override,
+   the toggle sets data-theme="light" on <html> and stores that choice in
+   localStorage. There is no automatic system preference here on purpose,
+   every visitor sees dark mode until they click the toggle. */
+:root {
+  /* --color-ink is text-on-amber only (buttons, step badges) and does not change with theme. */
+  --color-ink: #0b1f2e;
+  --color-navy: #eaf2f7;
+  --color-teal: #6fd6d6;
+  --color-amber: #f8b13c;
+  --color-amber-light: #e8c179;
+
+  --color-bg: #0f1720;
+  --color-bg-soft: #16212c;
+  --color-text: #e6edf2;
+  --color-text-muted: #9fb3bf;
+  --color-border: #263241;
+
+  --font-sans: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.75rem;
+  --space-lg: 3rem;
+  --space-xl: 5rem;
+
+  --radius: 10px;
+  --container-width: 1120px;
+}
+
+:root[data-theme="light"] {
+  --color-navy: #123047;
+  --color-teal: #1c7c7c;
+  --color-amber: #f6a620;
+  --color-amber-light: #ffeab0;
+
+  --color-bg: #ffffff;
+  --color-bg-soft: #f6f8f9;
+  --color-text: #16242e;
+  --color-text-muted: #55707d;
+  --color-border: #e3e9ec;
+}
+
+/* ---------- Base ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  color: var(--color-navy);
+  line-height: 1.2;
+  margin: 0 0 var(--space-sm);
+}
+
+h1 { font-size: clamp(2rem, 4vw, 3rem); }
+h2 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
+h3 { font-size: 1.15rem; }
+
+p { margin: 0 0 var(--space-sm); }
+
+a {
+  color: var(--color-teal);
+  text-decoration: none;
+}
+
+a:hover { text-decoration: underline; }
+
+img, svg { max-width: 100%; }
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+section { padding: var(--space-xl) 0; }
+section.soft { background: var(--color-bg-soft); }
+
+.section-heading {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto var(--space-lg);
+}
+.section-heading p { color: var(--color-text-muted); }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  text-decoration: none;
+}
+.btn:hover { text-decoration: none; }
+
+.btn-primary {
+  background: var(--color-amber);
+  color: var(--color-ink);
+}
+.btn-primary:hover { background: #e3960f; }
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-navy);
+  border: 1px solid var(--color-border);
+}
+.btn-secondary:hover { border-color: var(--color-navy); }
+
+.btn-group {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+/* ---------- Header / Nav ---------- */
+.site-header {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-sm);
+  padding-bottom: var(--space-sm);
+}
+
+.logo img { display: block; height: 32px; width: auto; }
+
+.nav-links {
+  display: flex;
+  gap: var(--space-md);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: var(--color-navy);
+  font-weight: 500;
+}
+
+.nav-links a[aria-current="page"] {
+  color: var(--color-amber);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown summary {
+  cursor: pointer;
+  color: var(--color-navy);
+  font-weight: 500;
+  list-style: none;
+}
+
+.nav-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+.nav-dropdown summary::after {
+  content: " \25BE";
+  font-size: 0.7em;
+}
+
+.nav-dropdown[open] summary::after {
+  content: " \25B4";
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 20;
+  margin-top: var(--space-xs);
+  padding: var(--space-xs);
+  min-width: 220px;
+  list-style: none;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.nav-dropdown-menu li + li {
+  margin-top: 2px;
+}
+
+.nav-dropdown-menu a {
+  display: block;
+  padding: 0.4rem 0.5rem;
+  border-radius: 6px;
+  color: var(--color-navy);
+  font-weight: 500;
+}
+
+.nav-dropdown-menu a:hover {
+  background: var(--color-bg-soft);
+  text-decoration: none;
+}
+
+.theme-toggle {
+  border: none;
+  background: transparent;
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: 0.4rem 0.55rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  background: var(--color-bg-soft);
+}
+
+/* ---------- Decorative backgrounds ----------
+   Reusable blurred "blob" shapes plus a faint dot grid, applied to the
+   hero-type and CTA sections that bookend every page. Kept to those
+   bookend sections (not every section) so the blobs add visual interest
+   without competing with the actual content in between. */
+@keyframes drift-a {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-14px, 18px); }
+}
+@keyframes drift-b {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(16px, -12px); }
+}
+
+.hero, .page-hero, .cta-band {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero::before, .hero::after,
+.page-hero::before, .page-hero::after,
+.cta-band::before, .cta-band::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(50px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.hero::before, .page-hero::before {
+  width: 340px;
+  height: 340px;
+  top: -150px;
+  right: -60px;
+  background: radial-gradient(circle, var(--color-amber-light), transparent 70%);
+  animation: drift-a 16s ease-in-out infinite;
+}
+
+.hero::after, .page-hero::after {
+  width: 260px;
+  height: 260px;
+  bottom: -120px;
+  left: -60px;
+  background: radial-gradient(circle, var(--color-teal), transparent 70%);
+  opacity: 0.3;
+  animation: drift-b 20s ease-in-out infinite;
+}
+
+.cta-band::before {
+  width: 320px;
+  height: 320px;
+  top: -130px;
+  left: -60px;
+  background: radial-gradient(circle, rgba(246, 166, 32, 0.35), transparent 70%);
+  animation: drift-a 18s ease-in-out infinite;
+}
+
+.cta-band::after {
+  width: 260px;
+  height: 260px;
+  bottom: -110px;
+  right: -50px;
+  background: radial-gradient(circle, rgba(95, 208, 208, 0.35), transparent 70%);
+  animation: drift-b 22s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero::before, .hero::after,
+  .page-hero::before, .page-hero::after,
+  .cta-band::before, .cta-band::after {
+    animation: none;
+  }
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: var(--space-xl) 0;
+  text-align: center;
+  /* The faint hexagon echoes the lantern mark in logo.svg, same shape, just a watermark. */
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpolygon points='180,100 140,30 60,30 20,100 60,170 140,170' fill='none' stroke='%23F6A620' stroke-width='3' stroke-opacity='0.18'/%3E%3C/svg%3E") right -40px top -40px / 320px 320px no-repeat,
+    radial-gradient(circle, var(--color-border) 1px, transparent 1px) 0 0 / 28px 28px,
+    linear-gradient(180deg, var(--color-bg-soft), var(--color-bg));
+}
+
+.hero .container { max-width: 760px; position: relative; }
+
+.hero p.subheading {
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+}
+
+.hero .btn-group { justify-content: center; }
+
+/* ---------- Grids / Cards ---------- */
+.grid {
+  display: grid;
+  gap: var(--space-md);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.card {
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-bg);
+}
+
+.card h3 { margin-bottom: var(--space-xs); }
+.card p { color: var(--color-text-muted); margin-bottom: 0; }
+
+.card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: var(--space-xs);
+  border-radius: 50%;
+  background: var(--color-amber-light);
+  color: var(--color-ink);
+}
+.card-icon svg { width: 22px; height: 22px; }
+
+.card-icon.large {
+  width: 64px;
+  height: 64px;
+}
+.card-icon.large svg { width: 32px; height: 32px; }
+
+.service-card .service-link {
+  display: inline-block;
+  margin-top: var(--space-xs);
+  font-weight: 600;
+}
+
+/* ---------- Steps (approach) ---------- */
+.steps {
+  display: grid;
+  gap: var(--space-md);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  counter-reset: step;
+}
+
+.step {
+  position: relative;
+  padding-left: var(--space-md);
+}
+
+.step::before {
+  counter-increment: step;
+  content: counter(step);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin-bottom: var(--space-xs);
+  border-radius: 50%;
+  background: var(--color-amber-light);
+  color: var(--color-ink);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.step h3 { margin-bottom: var(--space-xs); }
+.step p { color: var(--color-text-muted); margin-bottom: 0; }
+
+/* ---------- List (outcomes / offerings) ---------- */
+.plain-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.plain-list li {
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.plain-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: var(--color-amber);
+}
+
+/* ---------- CTA band ---------- */
+.cta-band {
+  /* Fixed brand navy, deliberately not a theme token: this band stays the same in light and dark mode. */
+  background:
+    radial-gradient(circle, rgba(255, 255, 255, 0.08) 1px, transparent 1px) 0 0 / 28px 28px,
+    #123047;
+  color: #fff;
+  text-align: center;
+}
+
+.cta-band h2 { color: #fff; }
+.cta-band p { color: #cfe0e8; }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  background: var(--color-bg-soft);
+  color: var(--color-text-muted);
+}
+
+.site-footer .container {
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-lg);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  justify-content: space-between;
+}
+
+.site-footer a { color: var(--color-navy); }
+
+.footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.footer-copyright {
+  width: 100%;
+  margin-top: var(--space-md);
+  font-size: 0.85rem;
+}
+
+/* ---------- Page hero (non-home pages) ---------- */
+.page-hero {
+  padding: var(--space-lg) 0;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpolygon points='180,100 140,30 60,30 20,100 60,170 140,170' fill='none' stroke='%23F6A620' stroke-width='3' stroke-opacity='0.18'/%3E%3C/svg%3E") right -40px top -40px / 260px 260px no-repeat,
+    radial-gradient(circle, var(--color-border) 1px, transparent 1px) 0 0 / 28px 28px,
+    var(--color-bg-soft);
+}
+
+.page-hero .container { max-width: 760px; }
+.page-hero p { color: var(--color-text-muted); font-size: 1.1rem; }
+
+/* ---------- Founders ---------- */
+.founders {
+  display: grid;
+  gap: var(--space-lg);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.founder-card {
+  display: flex;
+  gap: var(--space-md);
+  align-items: flex-start;
+}
+
+.founder-photo {
+  flex: none;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--color-border);
+}
+
+.founder-card h3 { margin-bottom: 0; }
+.founder-title {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin-bottom: var(--space-xs);
+}
+.founder-card p:last-child { margin-bottom: 0; }
+
+/* ---------- Placeholder page ---------- */
+.placeholder-note {
+  padding: var(--space-md);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius);
+  color: var(--color-text-muted);
+}

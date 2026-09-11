@@ -1,0 +1,6 @@
+<div class="card service-card">
+  {% include "partials/service-icon.njk" %}
+  <h3>{{ service.name }}</h3>
+  <p>{{ service.summary }}</p>
+  <a class="service-link" href="/services/{{ service.slug }}/">Learn more →</a>
+</div>

@@ -1,0 +1,33 @@
+---
+layout: layouts/base.njk
+title: Technology
+description: "The technology stack Lantera Digital works with: Databricks, Microsoft Fabric, Power BI, Anthropic Claude, and more."
+permalink: /technology/
+---
+<section class="page-hero">
+  <div class="container">
+    <h1>{{ technology.hero_heading }}</h1>
+    <p>{{ technology.hero_body }}</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="grid">
+      {% for item in technology.stack %}
+      <div class="card">
+        <h3>{{ item.name }}</h3>
+        <p>{{ item.blurb }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>{{ site.cta.heading }}</h2>
+    <p>{{ site.cta.body }}</p>
+    <a class="btn btn-primary" href="{{ site.cta.button_url }}">{{ site.cta.button_label }}</a>
+  </div>
+</section>

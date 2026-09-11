@@ -1,0 +1,14 @@
+{
+  "name": "lantera-digital-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Lantera Digital marketing website — Eleventy + YAML content",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "js-yaml": "^4.1.0"
+  }
+}
