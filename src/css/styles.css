@@ -552,3 +552,24 @@ section.soft { background: var(--color-bg-soft); }
   border-radius: var(--radius);
   color: var(--color-text-muted);
 }
+
+/* ---------- WhatsApp button ---------- */
+.whatsapp-float {
+  position: fixed;
+  left: var(--space-sm);
+  bottom: var(--space-sm);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #25d366;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+.whatsapp-float:hover {
+  background: #20bd5a;
+  text-decoration: none;
+}
