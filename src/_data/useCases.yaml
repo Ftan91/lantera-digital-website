@@ -1,0 +1,262 @@
+- id: insurance-claims
+  slug: insurance-claims-assistant
+  industry: Insurance
+  name: Insurance claims enquiries
+  title: An assistant that answers insurance claims enquiries without guessing
+  summary: >-
+    A proof of concept that reads a customer's message, finds the policy
+    wording it actually needs, and only answers once that answer can be
+    backed up, with a person checking anything that matters.
+  hero_body: >-
+    Insurance customers ask two kinds of questions constantly. What does my
+    policy cover, and can I open a claim for this. Getting those answers
+    right depends on someone finding the correct policy wording and
+    compliance rules before replying, which takes time and is easy to get
+    inconsistent across a busy team. We built this proof of concept to test
+    whether an AI system could take on the first pass of that work
+    responsibly, and recognise when to step back and let a person decide.
+  problem_heading: The problem this is solving
+  problem_body: >-
+    A team fielding policy and claims questions has to balance speed
+    against accuracy. Answer too quickly from memory and there is a risk of
+    giving the wrong information about what is covered. Slow the process
+    down to check every document properly and customers wait longer than
+    they should for a simple question. Neither option is good, and the
+    risk grows for anything that touches an actual claim, where a wrong
+    answer has real financial consequences.
+  solution_heading: What we built
+  solution_body: >-
+    A system that reads what the customer is asking, works out what kind
+    of question it is, and finds the specific policy wording and
+    compliance rules that apply before attempting to answer. It only
+    drafts a response once it has found something relevant to base that
+    response on, and the draft is checked against the source material
+    before it is allowed to proceed. Anything involving an actual claim,
+    or an account that has been flagged for extra care, is handed to a
+    person to approve, edit, or reject before the customer sees it.
+  how_it_works:
+    - title: Read the enquiry
+      body: >-
+        The system reads the customer's message in the context of the full
+        conversation, not just the last line, so a short reply such as
+        "yes please, go ahead" is still understood correctly.
+    - title: Find the relevant policy details
+      body: >-
+        It searches the actual policy documents and compliance rules for
+        the parts that apply to this specific question, rather than
+        relying on general knowledge.
+    - title: Draft a response
+      body: >-
+        A reply is prepared using only what was found in those documents.
+        If nothing relevant turns up, the system says so honestly instead
+        of guessing.
+    - title: Check the draft
+      body: >-
+        The drafted answer is checked against the source material and
+        compliance rules before it goes any further. Anything that cannot
+        be properly supported is stopped automatically and replaced with
+        a safe, honest fallback.
+    - title: Human review where it counts
+      body: >-
+        Any message tied to an actual claim, or belonging to a flagged
+        account, is sent to a person to approve, edit, or reject. The
+        customer never sees an unchecked answer to something this
+        important.
+    - title: Record the outcome
+      body: >-
+        Once approved, the next step, such as opening a claim, is recorded
+        automatically, with a full log of what happened and why at every
+        stage.
+  safeguards_heading: How we kept it honest
+  safeguards_body: >-
+    The most important design decision in this proof of concept was making
+    sure the system could never quietly make something up. It only answers
+    using the policy documents it was given, and if a question falls
+    outside what those documents cover, it says so rather than filling the
+    gap with a guess. Every answer is checked a second time against those
+    same documents before it is allowed out, and every claim request or
+    flagged account is reviewed by a person regardless of how confident the
+    system's own check looks. Every step, including anything that was
+    blocked, is written to a log that can be reviewed afterwards.
+  outcomes:
+    - Routine coverage questions get answered faster and more consistently
+    - A person stays in control of anything tied to an actual claim
+    - A written record of every step, useful for training and for audits
+    - A safe way to explore what AI can responsibly take on in a claims
+      team, before deciding what to build properly
+
+- id: legal-precedent
+  slug: legal-precedent-research
+  industry: Legal
+  name: Legal precedent research
+  title: Building a legal argument with every citation checked
+  summary: >-
+    A proof of concept that researches a narrow, well understood area of
+    contract law, drafts an argument from real cases, and checks every
+    citation against the public record before a lawyer sees it.
+  hero_body: >-
+    Preparing a legal argument means finding the past cases that genuinely
+    support a position, and recognising which ones do not, before building
+    an argument around them. Much of that early research is repetitive and
+    time consuming, which makes it tempting to use AI to speed it up. It
+    also makes AI risky for this particular job, because a system that
+    invents a case which sounds real but does not exist is a serious
+    professional problem. We built this proof of concept around one well
+    defined area of dispute, specifically to test whether that risk could
+    be properly controlled.
+  problem_heading: The problem this is solving
+  problem_body: >-
+    Early stage legal research, working out which precedent cases actually
+    support a position, takes real time, and the quality of the final
+    argument depends on how thorough that research was. Using a general AI
+    system to speed this up introduces a specific danger. These systems
+    can produce a citation that reads convincingly but refers to a case
+    that was never decided, or does not say what it is claimed to say. In
+    a legal context, that is not a minor error. It can undermine an entire
+    argument.
+  solution_heading: What we built
+  solution_body: >-
+    A proof of concept scoped to one specific, well understood type of
+    contract dispute, whether a penalty clause in a contract can be
+    enforced under the law of England and Wales. Given a description of a
+    situation, it works out the underlying legal issue, searches a small,
+    verified set of real judgments for the cases that actually apply, and
+    drafts an argument using only those cases. Before anything is shown to
+    a lawyer, every citation in that draft is checked against the National
+    Archives' public record of judgments, the same source the case set was
+    built from. A lawyer reviews and approves every argument produced,
+    without exception.
+  how_it_works:
+    - title: Understand the issue
+      body: >-
+        The system works out what kind of dispute is being described,
+        based on the facts provided.
+    - title: Search real case law
+      body: >-
+        It searches a small, hand verified set of real judgments for the
+        cases that genuinely apply, rather than cases that merely sound
+        related.
+    - title: Draft the argument
+      body: >-
+        An argument is drafted using only the cases found in the previous
+        step, citing them directly.
+    - title: Verify every citation
+      body: >-
+        Every case cited in the draft is checked live against the National
+        Archives' public record before anything moves forward. A citation
+        that cannot be verified is flagged, not passed through.
+    - title: Human review
+      body: >-
+        A lawyer reviews the draft and the verification results, and
+        decides whether to approve it, exactly as they would review a
+        draft from a junior researcher.
+  safeguards_heading: How we kept it honest
+  safeguards_body: >-
+    Two decisions did most of the work here. First, the set of cases the
+    system can draw from is small and entirely real, built from actual
+    judgments published by the National Archives, so there is nothing
+    invented for it to lean on. Second, and just as important, every
+    citation that ends up in a drafted argument is checked again, live,
+    against that same public record before a person ever sees it, rather
+    than trusting that the drafting step got it right. The case set also
+    deliberately includes one judgment that sounds related but does not
+    actually apply, specifically to confirm the system recognises when a
+    case should not be used, rather than reaching for it regardless.
+  outcomes:
+    - A faster first pass on a well defined type of legal research
+    - No citation reaches a lawyer without being checked against the
+      public record first
+    - A lawyer remains the final decision maker on every argument produced
+    - A clear, honest test of where this kind of AI use is, and is not,
+      appropriate in legal work
+
+- id: procurement-shortlist
+  slug: vendor-shortlisting
+  industry: Procurement
+  name: Vendor shortlisting
+  title: Shortlisting suppliers fairly, with the numbers to prove it
+  summary: >-
+    A proof of concept that scores vendor bids against weighted
+    requirements, checks pricing against real market data, and enforces
+    mandatory requirements automatically, so the cheapest bid cannot skip
+    past a requirement that actually matters.
+  hero_body: >-
+    Comparing vendor bids against a set of requirements sounds
+    straightforward, until it is being done under time pressure, across
+    several bids, each with a different mix of strengths and a different
+    price. A requirement that is meant to be mandatory can end up treated
+    as just another factor to weigh up, and the best written bid can win
+    the room instead of the best value one. We built this proof of concept
+    to test whether an AI system could produce a fair, defensible
+    shortlist, while keeping the parts that genuinely have to be strict,
+    strict.
+  problem_heading: The problem this is solving
+  problem_body: >-
+    Evaluating vendor bids against several weighted requirements takes
+    time to do properly, and the result can end up shaped by whichever bid
+    reads most convincingly rather than which one is genuinely the best
+    fit. Mandatory requirements, such as a required certification, are
+    meant to be a strict cut off, but under time pressure they can end up
+    treated as just another point on a scorecard. Price comparisons are
+    also hard to judge fairly without knowing what similar work actually
+    costs elsewhere.
+  solution_heading: What we built
+  solution_body: >-
+    A proof of concept that takes an evaluation brief, meaning what the
+    business needs and how much each requirement matters, and works
+    through it in stages. It checks real historical pricing from public UK
+    government tender records so the pricing comparison has something
+    genuine to be measured against, scores each vendor against the stated
+    requirements, and ranks them using a fixed calculation rather than an
+    AI's impression of who should win, so the numbers behind the
+    shortlist can be checked line by line. A mandatory requirement, such
+    as a required certification, is enforced automatically and rules a
+    vendor out completely if it is missing, regardless of how attractive
+    the rest of the bid looks. A person reviews and approves the
+    shortlist before it is treated as final.
+  how_it_works:
+    - title: Understand the priorities
+      body: >-
+        The system reads the evaluation brief and works out what matters
+        most for this particular decision.
+    - title: Check real market pricing
+      body: >-
+        It pulls comparable pricing from public UK government tender
+        records, so the numbers in each bid have genuine context.
+    - title: Score each vendor
+      body: >-
+        Every vendor bid is scored against the stated requirements, using
+        the priorities set out in the brief.
+    - title: Rank with a fixed calculation
+      body: >-
+        Vendors are ranked using a fixed, checkable calculation rather
+        than a judgment call, so the same requirements and priorities
+        produce the same result every time.
+    - title: Draft the report
+      body: >-
+        A shortlist report is prepared, showing how each vendor scored and
+        why.
+    - title: Human review
+      body: >-
+        A procurement manager reviews the shortlist and approves it before
+        it is treated as a decision.
+  safeguards_heading: How we kept it honest
+  safeguards_body: >-
+    The most important safeguard here has nothing to do with AI at all.
+    The mandatory requirement check and the final ranking calculation are
+    both handled by plain, fixed logic, not by asking the AI system to use
+    its judgment, which means the cheapest vendor in our test set is
+    excluded from every single shortlist because it lacks a required
+    certification, regardless of how the rest of the brief is weighted.
+    Anything that genuinely has to be strict is enforced in a way that
+    cannot be argued around. The parts that do call for judgment, reading
+    the brief and scoring each bid against it, are still reviewed and
+    signed off by a person before the shortlist is treated as final.
+  outcomes:
+    - A consistent way to evaluate vendor bids, regardless of who is
+      running the process
+    - Mandatory requirements that are actually enforced, not just noted
+    - Pricing benchmarked against real, comparable data instead of a gut
+      feeling
+    - A shortlist a procurement manager reviews and signs off, not a
+      decision made for them

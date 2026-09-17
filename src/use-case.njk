@@ -1,0 +1,91 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: useCases
+  size: 1
+  alias: useCase
+permalink: "/services/ai-offerings/use-cases/{{ useCase.slug }}/"
+eleventyComputed:
+  title: "{{ useCase.title }}"
+  description: "{{ useCase.summary }}"
+---
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">{{ useCase.industry }} proof of concept</p>
+    <h1>{{ useCase.title }}</h1>
+    <p>{{ useCase.hero_body }}</p>
+  </div>
+</section>
+
+<section>
+  <div class="container" style="max-width: 720px;">
+    <div class="section-heading">
+      <h2>{{ useCase.problem_heading }}</h2>
+      <p>{{ useCase.problem_body }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="soft">
+  <div class="container" style="max-width: 720px;">
+    <div class="section-heading">
+      <h2>{{ useCase.solution_heading }}</h2>
+      <p>{{ useCase.solution_body }}</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-heading">
+      <h2>How it works</h2>
+    </div>
+    <div class="flow-diagram">
+      {% for item in useCase.how_it_works %}
+      <div class="flow-step">
+        <div class="flow-num">{{ loop.index }}</div>
+        <p>{{ item.title }}</p>
+      </div>
+      {% if not loop.last %}<div class="flow-arrow" aria-hidden="true">&rarr;</div>{% endif %}
+      {% endfor %}
+    </div>
+    <div class="steps" style="margin-top: var(--space-lg);">
+      {% for item in useCase.how_it_works %}
+      <div class="step">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.body }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="soft">
+  <div class="container" style="max-width: 720px;">
+    <div class="section-heading">
+      <h2>{{ useCase.safeguards_heading }}</h2>
+      <p>{{ useCase.safeguards_body }}</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container" style="max-width: 640px;">
+    <div class="section-heading">
+      <h2>What this showed us</h2>
+    </div>
+    <ul class="plain-list">
+      {% for outcome in useCase.outcomes %}
+      <li>{{ outcome }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>{{ site.cta.heading }}</h2>
+    <p>{{ site.cta.body }}</p>
+    <a class="btn btn-primary" href="{{ site.cta.button_url }}">{{ site.cta.button_label }}</a>
+  </div>
+</section>

@@ -432,6 +432,54 @@ section.soft { background: var(--color-bg-soft); }
 .step h3 { margin-bottom: var(--space-xs); }
 .step p { color: var(--color-text-muted); margin-bottom: 0; }
 
+/* ---------- Flow diagram (use cases) ---------- */
+.flow-diagram {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--space-sm);
+}
+
+.flow-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  text-align: center;
+}
+
+.flow-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-bottom: var(--space-xs);
+  border-radius: 50%;
+  background: var(--color-amber-light);
+  color: var(--color-ink);
+  font-weight: 700;
+}
+
+.flow-step p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.flow-arrow {
+  flex-shrink: 0;
+  align-self: center;
+  color: var(--color-border);
+  font-size: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .flow-diagram { flex-direction: column; align-items: center; }
+  .flow-arrow { transform: rotate(90deg); }
+}
+
 /* ---------- List (outcomes / offerings) ---------- */
 .plain-list {
   list-style: none;
@@ -514,6 +562,16 @@ section.soft { background: var(--color-bg-soft); }
 
 .page-hero .container { max-width: 760px; }
 .page-hero p { color: var(--color-text-muted); font-size: 1.1rem; }
+
+.eyebrow {
+  display: block;
+  margin-bottom: var(--space-xs);
+  color: var(--color-teal);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
 
 /* ---------- Founders ---------- */
 .founders {

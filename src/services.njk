@@ -59,7 +59,32 @@ eleventyComputed:
   </div>
 </section>
 
+{% if service.id == "ai-offerings" %}
 <section class="soft">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Use cases we've explored</h2>
+      <p>
+        Proof of concept builds we've put together to test what applied AI
+        can responsibly do in a few different industries. Each one is a
+        full write up, not just a summary.
+      </p>
+    </div>
+    <div class="grid">
+      {% for useCase in useCases %}
+      <div class="card">
+        <p class="eyebrow">{{ useCase.industry }}</p>
+        <h3>{{ useCase.name }}</h3>
+        <p>{{ useCase.summary }}</p>
+        <a class="service-link" href="/services/ai-offerings/use-cases/{{ useCase.slug }}/">Read the write up →</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section{% if service.id != "ai-offerings" %} class="soft"{% endif %}>
   <div class="container" style="max-width: 640px;">
     <div class="section-heading">
       <h2>What you get</h2>
