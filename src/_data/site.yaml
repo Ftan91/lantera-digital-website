@@ -1,5 +1,4 @@
 name: Lantera Digital
-tagline: Data and AI consultancy
 description: >-
   Lantera Digital is a Malaysian data and AI consultancy helping
   organisations turn data into decisions they can trust, through
@@ -36,7 +35,7 @@ footer:
   explore_heading: Explore
 
 contact:
-  email: hello@lanteradigital.com
+  email: info@lanteradigital.com
   linkedin: https://www.linkedin.com/company/lantera-digital
   whatsapp_number: "447714014331"
   whatsapp_message: "Hello, I would like to learn more about Lantera Digital's services."
