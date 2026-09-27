@@ -4,15 +4,11 @@ title: Case Studies
 description: "Case studies from Lantera Digital, coming soon."
 permalink: /case-studies/
 ---
-<section class="page-hero textured tone-velvet">
+<section class="hero textured tone-velvet">
   <div class="container">
     <h1>{{ caseStudies.hero_heading }}</h1>
     <p>{{ caseStudies.hero_body }}</p>
   </div>
 </section>
 
-<section>
-  <div class="container" style="max-width: 640px;">
-    <p class="placeholder-note">{{ caseStudies.note }} <a href="/contact/">{{ caseStudies.note_link }}</a></p>
-  </div>
-</section>
+{% include "partials/cta-band.njk" %}

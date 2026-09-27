@@ -4,7 +4,7 @@ title: About
 description: "About Lantera Digital, a Malaysian data and AI consultancy."
 permalink: /about/
 ---
-<section class="page-hero textured tone-velvet">
+<section class="hero textured tone-velvet">
   <div class="container">
     <h1>{{ about.hero_heading }}</h1>
     <p>{{ about.hero_body }}</p>
@@ -12,14 +12,14 @@ permalink: /about/
 </section>
 
 <section>
-  <div class="container" style="max-width: 720px;">
+  <div class="container narrow">
     <h2>{{ about.mission_heading }}</h2>
     <p>{{ about.mission_body }}</p>
   </div>
 </section>
 
 <section class="soft">
-  <div class="container" style="max-width: 720px;">
+  <div class="container narrow">
     <h2>{{ about.approach_heading }}</h2>
     <p>{{ about.approach_body }}</p>
   </div>
@@ -53,7 +53,7 @@ permalink: /about/
         <img class="founder-photo" src="{{ founder.photo }}" alt="{{ founder.name }}">
         <div>
           <h3>{{ founder.name }}</h3>
-          <p class="founder-title">{{ founder.title }} · <a href="{{ founder.linkedin }}">LinkedIn</a></p>
+          <p class="founder-title">{{ founder.title }} · <a href="{{ founder.linkedin }}">{{ site.labels.linkedin }}</a></p>
           <p>{{ founder.bio }}</p>
         </div>
       </div>

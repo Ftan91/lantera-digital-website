@@ -4,7 +4,7 @@ title: Our Services
 description: "The three ways Lantera Digital works with you: training, data platforms, and AI."
 permalink: /services/
 ---
-<section class="page-hero textured tone-slate">
+<section class="hero textured tone-slate">
   <div class="container">
     <h1>{{ site.services_page.hub_heading }}</h1>
     <p>{{ site.services_page.hub_body }}</p>
@@ -13,7 +13,7 @@ permalink: /services/
 
 <section>
   <div class="container">
-    <div class="feature-grid">
+    <div class="grid">
       {% for service in services %}
         {% include "partials/service-card.njk" %}
       {% endfor %}

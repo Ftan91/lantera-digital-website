@@ -1,19 +1,13 @@
 const yaml = require("js-yaml");
 
 module.exports = function (eleventyConfig) {
+  // Content lives in src/_data/*.yaml; Eleventy only reads JSON/JS data out of the box.
   eleventyConfig.addDataExtension("yaml", (contents) => yaml.load(contents));
 
-  eleventyConfig.addPassthroughCopy({ "src/css": "css" });
-  eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
-  eleventyConfig.addPassthroughCopy({ "src/js": "js" });
-  eleventyConfig.addPassthroughCopy({ "src/CNAME": "CNAME" });
+  // Copied as is: src/css -> _site/css, and so on.
+  for (const path of ["css", "assets", "js", "CNAME"]) {
+    eleventyConfig.addPassthroughCopy(`src/${path}`);
+  }
 
-  return {
-    dir: {
-      input: "src",
-      output: "_site",
-      includes: "_includes",
-      data: "_data",
-    },
-  };
+  return { dir: { input: "src", output: "_site" } };
 };

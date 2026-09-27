@@ -9,9 +9,8 @@ eleventyComputed:
   title: "{{ service.name }}"
   description: "{{ service.summary }}"
 ---
-<section class="page-hero textured tone-{{ service.tone }}">
+<section class="hero textured tone-{{ service.tone }}">
   <div class="container">
-    {% set iconSize = "large" %}
     {% include "partials/service-icon.njk" %}
     <h1>{{ service.hero_heading }}</h1>
     <p>{{ service.hero_body }}</p>
@@ -59,29 +58,8 @@ eleventyComputed:
   </div>
 </section>
 
-{% if service.id == "ai-offerings" %}
 <section class="soft">
-  <div class="container">
-    <div class="section-heading">
-      <h2>{{ site.services_page.use_cases_heading }}</h2>
-      <p>{{ site.services_page.use_cases_intro }}</p>
-    </div>
-    <div class="grid">
-      {% for useCase in useCases %}
-      <div class="card">
-        <p class="eyebrow">{{ useCase.industry }}</p>
-        <h3>{{ useCase.name }}</h3>
-        <p>{{ useCase.summary }}</p>
-        <a class="card-link" href="/services/ai-offerings/use-cases/{{ useCase.slug }}/">{{ site.labels.read_write_up }} →</a>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-{% endif %}
-
-<section{% if service.id != "ai-offerings" %} class="soft"{% endif %}>
-  <div class="container" style="max-width: 640px;">
+  <div class="container narrow">
     <div class="section-heading">
       <h2>{{ site.services_page.outcomes_heading }}</h2>
     </div>
@@ -92,5 +70,27 @@ eleventyComputed:
     </ul>
   </div>
 </section>
+
+{# Only the AI Offerings page lists the use case write ups. #}
+{% if service.slug == "ai-offerings" %}
+<section>
+  <div class="container">
+    <div class="section-heading">
+      <h2>{{ site.services_page.use_cases_heading }}</h2>
+      <p>{{ site.services_page.use_cases_intro }}</p>
+    </div>
+    <div class="grid">
+      {% for useCase in useCases %}
+      <div class="card">
+        <span class="eyebrow">{{ useCase.industry }}</span>
+        <h3>{{ useCase.name }}</h3>
+        <p>{{ useCase.summary }}</p>
+        <a class="card-link" href="/services/ai-offerings/use-cases/{{ useCase.slug }}/">{{ site.labels.read_write_up }} →</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
 
 {% include "partials/cta-band.njk" %}

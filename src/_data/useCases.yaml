@@ -1,5 +1,4 @@
-- id: insurance-claims
-  slug: insurance-claims-assistant
+- slug: insurance-claims-assistant
   industry: Insurance
   name: Insurance Claims Enquiries
   title: An Assistant That Answers Insurance Claims Enquiries Without Guessing
@@ -85,8 +84,7 @@
     - A safe way to explore what AI can responsibly take on in a claims
       team, before deciding what to build properly
 
-- id: legal-precedent
-  slug: legal-precedent-research
+- slug: legal-precedent-research
   industry: Legal
   name: Legal Precedent Research
   title: Building a Legal Argument With Every Citation Checked
@@ -170,8 +168,7 @@
     - A clear, honest test of where this kind of AI use is, and is not,
       appropriate in legal work
 
-- id: procurement-shortlist
-  slug: vendor-shortlisting
+- slug: vendor-shortlisting
   industry: Procurement
   name: Vendor Shortlisting
   title: Shortlisting Suppliers Fairly, With the Numbers to Prove It

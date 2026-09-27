@@ -1,59 +1,47 @@
 # Lantera Digital Website
 
-Live at [lanteradigital.com](https://lanteradigital.com) (lanteradigital.com.my redirects to it).
+Live at [lanteradigital.com](https://lanteradigital.com).
 
-The marketing website for Lantera Digital, a Malaysian data and AI consultancy. Three service lines: Data & AI Training, Data Platform Services, and AI Offerings.
-
-Static site, built with [Eleventy (11ty)](https://www.11ty.dev/), plain HTML/CSS/JS, no client side framework. All page content lives in YAML data files, not in the templates, so copy can be edited without touching any code.
+The marketing website for Lantera Digital, a Malaysian data and AI consultancy. Built with [Eleventy](https://www.11ty.dev/) and plain HTML/CSS, no client side framework. All copy lives in YAML files, so wording can be changed without touching templates.
 
 ## Getting started
 
 ```
 npm install
-npm run dev
+npm run dev     # http://localhost:8080, live reloads on any change
+npm run build   # static site into _site/
 ```
-
-Then open `http://localhost:8080`. The dev server hot reloads on any change, including edits to the YAML content files.
-
-```
-npm run build
-```
-
-builds the static site into `_site/`.
 
 ## Editing content
 
-Everything you see on the site (nav labels, headings, body copy, service details, founder bios, and so on) comes from the YAML files in `src/_data/`:
+Edit the YAML files in `src/_data/`:
 
 | File | Controls |
 |---|---|
-| `site.yaml` | Company name, nav (including the Our Services dropdown), footer, contact info, shared CTA copy |
-| `home.yaml` | Homepage hero, differentiators, "how we work" steps |
-| `services.yaml` | The 3 services, one entry each, drives both the services hub and each service's detail page |
-| `about.yaml` | About page copy, mission, principles, and the founders list |
-| `technology.yaml` | The Technology page's stack list |
-| `caseStudies.yaml` | Case Studies page copy (placeholder, no case studies written yet) |
+| `site.yaml` | Nav, footer, contact details, the closing call to action, shared headings and labels |
+| `home.yaml` | Homepage |
+| `services.yaml` | The 3 services; each entry becomes a page under `/services/` |
+| `useCases.yaml` | AI use case write ups under `/services/ai-offerings/use-cases/` |
+| `about.yaml` | About page, including founder bios |
+| `technology.yaml` | Technology page |
+| `caseStudies.yaml` | Case Studies page |
 
-Edit a value, save, and the dev server updates the page immediately. Adding a 4th service, for example, only means adding an entry to `services.yaml`, no new template required.
+Adding a service or a use case is just a new entry in the relevant file.
 
-## Project structure
+## Structure
 
 ```
 src/
-  _data/        YAML content (see table above)
-  _includes/    Shared layout and partials (nav, footer, service card/icon)
-  css/          Design tokens and all styling, plain CSS, no build step
-  assets/       Logo, favicon, founder photos
-  js/           Dark mode toggle script
+  _data/        YAML content (above)
+  _includes/    Page layout and partials (nav, footer, cards, CTA band)
+  css/          All styling; design tokens at the top of styles.css
+  assets/       Logo, favicon, founder photos, tech logos, background textures
+  js/           Theme toggle
   *.njk         Page templates
 ```
 
 ## Deployment
 
-Every push to `main` builds the site and deploys it to GitHub Pages automatically, via `.github/workflows/deploy.yml`. `lanteradigital.com` is the canonical domain GitHub Pages serves (HTTPS enforced); `lanteradigital.com.my` is a separate registrar level redirect to the same site, not a GitHub Pages concern. See `CLAUDE.md` for the full DNS/domain setup notes.
+Every push to `main` builds and deploys to GitHub Pages via `.github/workflows/deploy.yml`.
 
-## Status
-
-Static site, no backend yet. See `CLAUDE.md` for the fuller architecture notes and the roadmap (analytics backend, fuller CI/CD).
-
-This project is also being used as a hands on way to learn Claude Code's tooling (CLAUDE.md, agents, skills, and so on) alongside building the actual site.
+See `CLAUDE.md` for architecture details, design and tone rules, domain setup, and the roadmap.

@@ -2,7 +2,7 @@
   "name": "lantera-digital-website",
   "version": "1.0.0",
   "private": true,
-  "description": "Lantera Digital marketing website — Eleventy + YAML content",
+  "description": "Lantera Digital marketing website, built with Eleventy and YAML content",
   "scripts": {
     "dev": "eleventy --serve",
     "build": "eleventy"

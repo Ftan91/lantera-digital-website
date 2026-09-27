@@ -1,5 +1,4 @@
-- id: training
-  slug: training
+- slug: training
   name: Data & AI Training
   summary: >-
     Hands on training that builds lasting data and AI capability across
@@ -33,8 +32,7 @@
     - Training materials your team keeps and can reuse
     - A clear view of remaining skill gaps and how to close them
 
-- id: data-platform
-  slug: data-platform
+- slug: data-platform
   name: Data Platform Services
   summary: >-
     Reliable, well governed data platforms, built with your team and
@@ -69,8 +67,7 @@
     - Faster, more reliable access to data across the business
     - Complete documentation, with knowledge shared across the team
 
-- id: ai-offerings
-  slug: ai-offerings
+- slug: ai-offerings
   name: AI Offerings
   summary: >-
     Applied AI built around a defined business problem, from initial

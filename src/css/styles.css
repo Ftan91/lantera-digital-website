@@ -101,6 +101,9 @@ img, svg { max-width: 100%; }
   padding: 0 var(--space-md);
 }
 
+/* Single column text sections read better at a shorter line length. */
+.container.narrow { max-width: 760px; }
+
 section { padding: var(--space-xl) 0; }
 section.soft { background: var(--color-bg-soft); }
 
@@ -248,10 +251,6 @@ section.soft { background: var(--color-bg-soft); }
   box-shadow: 0 12px 32px rgba(15, 14, 13, 0.08);
 }
 
-.nav-dropdown-menu li + li {
-  margin-top: 2px;
-}
-
 .nav-dropdown-menu a {
   display: block;
   padding: 0.5rem 0.6rem;
@@ -296,7 +295,6 @@ section.soft { background: var(--color-bg-soft); }
   --tone: #2c3837;
   --on-tone: #fafaf9;
   --on-tone-muted: #dcd9d3;
-  position: relative;
   color: var(--on-tone);
   background-color: var(--tone);
   background-image:
@@ -322,33 +320,19 @@ section.soft { background: var(--color-bg-soft); }
 .textured .btn-secondary { color: var(--on-tone); border-color: rgba(250, 250, 249, 0.55); }
 .textured .btn-secondary:hover { border-color: var(--on-tone); background: rgba(250, 250, 249, 0.08); }
 
-/* ---------- Hero ---------- */
-.hero {
-  padding: 9rem 0 8rem;
-}
+/* ---------- Hero ----------
+   The textured panel at the top of every page. The homepage adds
+   .hero-large for more height and room around its buttons. */
+.hero { padding: 6.5rem 0 5rem; }
+.hero .container > * { max-width: 820px; }
+.hero p { font-size: 1.15rem; }
+.hero .card-icon { border-color: rgba(250, 250, 249, 0.35); color: var(--on-tone); }
 
-.hero .container > * { max-width: 860px; }
+.hero-large { padding: 9rem 0 8rem; }
+.hero-large .container > p { max-width: 640px; font-size: 1.2rem; margin: var(--space-md) 0 var(--space-lg); }
 
-.hero p.subheading {
-  max-width: 640px;
-  font-size: 1.2rem;
-  margin: var(--space-md) 0 var(--space-lg);
-}
-
-/* ---------- Page hero (non-home pages) ---------- */
-.page-hero {
-  padding: 6.5rem 0 5rem;
-}
-
-.page-hero .container > * { max-width: 820px; }
-.page-hero p { font-size: 1.15rem; }
-.page-hero .card-icon { border-color: rgba(250, 250, 249, 0.35); color: var(--on-tone); }
-
-/* Small label above a title. Selectors are doubled up so it beats the
-   generic ".card p" and ".textured p" paragraph rules it sits inside. */
-.eyebrow,
-.card p.eyebrow,
-.textured p.eyebrow {
+/* Small uppercase label above a title (a <span>, so paragraph rules don't touch it). */
+.eyebrow {
   display: block;
   margin-bottom: var(--space-sm);
   color: var(--color-text-muted);
@@ -357,16 +341,10 @@ section.soft { background: var(--color-bg-soft); }
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
-.textured p.eyebrow { color: var(--on-tone-muted); }
+.textured .eyebrow { color: var(--on-tone-muted); }
 
 /* ---------- Feature cards (services) ---------- */
-/* Big textured cards with the title and copy laid over the texture. */
-.feature-grid {
-  display: grid;
-  gap: var(--space-sm);
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
+/* Big textured cards (in a .grid) with the title and copy laid over the texture. */
 .feature-card {
   display: flex;
   flex-direction: column;
@@ -374,7 +352,6 @@ section.soft { background: var(--color-bg-soft); }
   min-height: 340px;
   padding: 2.5rem;
   border-radius: var(--radius);
-  overflow: hidden;
 }
 
 .feature-card h3 { font-size: clamp(1.75rem, 2.5vw, 2.25rem); margin-bottom: var(--space-sm); }
@@ -417,20 +394,14 @@ section.soft { background: var(--color-bg-soft); }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   margin-bottom: var(--space-md);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
   color: var(--color-text);
 }
-.card-icon svg { width: 22px; height: 22px; }
-
-.card-icon.large {
-  width: 56px;
-  height: 56px;
-}
-.card-icon.large svg { width: 28px; height: 28px; }
+.card-icon svg { width: 24px; height: 24px; }
 
 /* Real brand marks: fixed white chip regardless of theme, so each
    company's official logo colours stay accurate and legible. */
@@ -480,52 +451,6 @@ section.soft { background: var(--color-bg-soft); }
 
 .step h3 { margin-bottom: var(--space-xs); }
 .step p { color: var(--color-text-muted); margin-bottom: 0; }
-
-/* ---------- Flow diagram (use cases) ---------- */
-.flow-diagram {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: var(--space-sm);
-}
-
-.flow-step {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 150px;
-}
-
-.flow-num {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  margin-bottom: var(--space-xs);
-  border: 1px solid var(--color-border-strong);
-  border-radius: 50%;
-  font-family: var(--font-serif);
-  color: var(--color-text);
-}
-
-.flow-step p {
-  margin: 0;
-  font-size: 0.9rem;
-  color: var(--color-text-muted);
-}
-
-.flow-arrow {
-  flex-shrink: 0;
-  margin-top: 4px;
-  color: var(--color-border-strong);
-  font-size: 1.25rem;
-}
-
-@media (max-width: 640px) {
-  .flow-diagram { flex-direction: column; }
-  .flow-arrow { transform: rotate(90deg); margin-left: 8px; }
-}
 
 /* ---------- List (outcomes) ---------- */
 .plain-list {
@@ -635,14 +560,6 @@ section.soft { background: var(--color-bg-soft); }
 }
 .founder-card p:last-child { margin-bottom: 0; }
 
-/* ---------- Placeholder page ---------- */
-.placeholder-note {
-  padding: var(--space-md);
-  border: 1px dashed var(--color-border-strong);
-  border-radius: var(--radius);
-  color: var(--color-text-muted);
-}
-
 /* ---------- WhatsApp button ---------- */
 /* WhatsApp's own brand green, kept so the button is instantly recognisable. */
 .whatsapp-float {
@@ -671,6 +588,6 @@ section.soft { background: var(--color-bg-soft); }
   .nav-right { width: 100%; flex-wrap: wrap; gap: var(--space-sm); }
   .nav-right nav { width: 100%; }
   .nav-links { gap: var(--space-xs) var(--space-md); }
-  .hero { padding: 5rem 0 4rem; }
-  .page-hero { padding: 4rem 0 3rem; }
+  .hero { padding: 4rem 0 3rem; }
+  .hero-large { padding: 5rem 0 4rem; }
 }
