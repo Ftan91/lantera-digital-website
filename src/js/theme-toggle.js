@@ -1,26 +1,17 @@
+// Light is the default (no attribute). The icons swap purely in CSS,
+// based on data-theme, so this only has to flip and remember the choice.
 (function () {
   var root = document.documentElement;
   var btn = document.getElementById("theme-toggle");
   if (!btn) return;
 
-  function isLight() {
-    return root.getAttribute("data-theme") === "light";
-  }
-
-  function render() {
-    btn.textContent = isLight() ? "🌙" : "☀️";
-  }
-
-  render();
-
   btn.addEventListener("click", function () {
-    if (isLight()) {
+    var dark = root.getAttribute("data-theme") === "dark";
+    if (dark) {
       root.removeAttribute("data-theme");
-      try { localStorage.setItem("lantera-theme", "dark"); } catch (e) {}
     } else {
-      root.setAttribute("data-theme", "light");
-      try { localStorage.setItem("lantera-theme", "light"); } catch (e) {}
+      root.setAttribute("data-theme", "dark");
     }
-    render();
+    try { localStorage.setItem("lantera-theme", dark ? "light" : "dark"); } catch (e) {}
   });
 })();

@@ -1,8 +1,8 @@
 - id: insurance-claims
   slug: insurance-claims-assistant
   industry: Insurance
-  name: Insurance claims enquiries
-  title: An assistant that answers insurance claims enquiries without guessing
+  name: Insurance Claims Enquiries
+  title: An Assistant That Answers Insurance Claims Enquiries Without Guessing
   summary: >-
     A proof of concept that reads a customer's message, finds the policy
     wording it actually needs, and only answers once that answer can be
@@ -15,7 +15,7 @@
     inconsistent across a busy team. We built this proof of concept to test
     whether an AI system could take on the first pass of that work
     responsibly, and recognise when to step back and let a person decide.
-  problem_heading: The problem this is solving
+  problem_heading: The Problem
   problem_body: >-
     A team fielding policy and claims questions has to balance speed
     against accuracy. Answer too quickly from memory and there is a risk of
@@ -24,7 +24,7 @@
     they should for a simple question. Neither option is good, and the
     risk grows for anything that touches an actual claim, where a wrong
     answer has real financial consequences.
-  solution_heading: What we built
+  solution_heading: What We Built
   solution_body: >-
     A system that reads what the customer is asking, works out what kind
     of question it is, and finds the specific policy wording and
@@ -35,39 +35,39 @@
     or an account that has been flagged for extra care, is handed to a
     person to approve, edit, or reject before the customer sees it.
   how_it_works:
-    - title: Read the enquiry
+    - title: Read the Enquiry
       body: >-
         The system reads the customer's message in the context of the full
         conversation, not just the last line, so a short reply such as
         "yes please, go ahead" is still understood correctly.
-    - title: Find the relevant policy details
+    - title: Find the Relevant Policy Details
       body: >-
         It searches the actual policy documents and compliance rules for
         the parts that apply to this specific question, rather than
         relying on general knowledge.
-    - title: Draft a response
+    - title: Draft a Response
       body: >-
         A reply is prepared using only what was found in those documents.
         If nothing relevant turns up, the system says so honestly instead
         of guessing.
-    - title: Check the draft
+    - title: Check the Draft
       body: >-
         The drafted answer is checked against the source material and
         compliance rules before it goes any further. Anything that cannot
         be properly supported is stopped automatically and replaced with
         a safe, honest fallback.
-    - title: Human review where it counts
+    - title: Human Review Where It Counts
       body: >-
         Any message tied to an actual claim, or belonging to a flagged
         account, is sent to a person to approve, edit, or reject. The
         customer never sees an unchecked answer to something this
         important.
-    - title: Record the outcome
+    - title: Record the Outcome
       body: >-
         Once approved, the next step, such as opening a claim, is recorded
         automatically, with a full log of what happened and why at every
         stage.
-  safeguards_heading: How we kept it honest
+  safeguards_heading: How We Kept It Honest
   safeguards_body: >-
     The most important design decision in this proof of concept was making
     sure the system could never quietly make something up. It only answers
@@ -88,8 +88,8 @@
 - id: legal-precedent
   slug: legal-precedent-research
   industry: Legal
-  name: Legal precedent research
-  title: Building a legal argument with every citation checked
+  name: Legal Precedent Research
+  title: Building a Legal Argument With Every Citation Checked
   summary: >-
     A proof of concept that researches a narrow, well understood area of
     contract law, drafts an argument from real cases, and checks every
@@ -104,7 +104,7 @@
     professional problem. We built this proof of concept around one well
     defined area of dispute, specifically to test whether that risk could
     be properly controlled.
-  problem_heading: The problem this is solving
+  problem_heading: The Problem
   problem_body: >-
     Early stage legal research, working out which precedent cases actually
     support a position, takes real time, and the quality of the final
@@ -114,7 +114,7 @@
     that was never decided, or does not say what it is claimed to say. In
     a legal context, that is not a minor error. It can undermine an entire
     argument.
-  solution_heading: What we built
+  solution_heading: What We Built
   solution_body: >-
     A proof of concept scoped to one specific, well understood type of
     contract dispute, whether a penalty clause in a contract can be
@@ -127,30 +127,30 @@
     built from. A lawyer reviews and approves every argument produced,
     without exception.
   how_it_works:
-    - title: Understand the issue
+    - title: Understand the Issue
       body: >-
         The system works out what kind of dispute is being described,
         based on the facts provided.
-    - title: Search real case law
+    - title: Search Real Case Law
       body: >-
         It searches a small, hand verified set of real judgments for the
         cases that genuinely apply, rather than cases that merely sound
         related.
-    - title: Draft the argument
+    - title: Draft the Argument
       body: >-
         An argument is drafted using only the cases found in the previous
         step, citing them directly.
-    - title: Verify every citation
+    - title: Verify Every Citation
       body: >-
         Every case cited in the draft is checked live against the National
         Archives' public record before anything moves forward. A citation
         that cannot be verified is flagged, not passed through.
-    - title: Human review
+    - title: Human Review
       body: >-
         A lawyer reviews the draft and the verification results, and
         decides whether to approve it, exactly as they would review a
         draft from a junior researcher.
-  safeguards_heading: How we kept it honest
+  safeguards_heading: How We Kept It Honest
   safeguards_body: >-
     Two decisions did most of the work here. First, the set of cases the
     system can draw from is small and entirely real, built from actual
@@ -173,8 +173,8 @@
 - id: procurement-shortlist
   slug: vendor-shortlisting
   industry: Procurement
-  name: Vendor shortlisting
-  title: Shortlisting suppliers fairly, with the numbers to prove it
+  name: Vendor Shortlisting
+  title: Shortlisting Suppliers Fairly, With the Numbers to Prove It
   summary: >-
     A proof of concept that scores vendor bids against weighted
     requirements, checks pricing against real market data, and enforces
@@ -190,7 +190,7 @@
     to test whether an AI system could produce a fair, defensible
     shortlist, while keeping the parts that genuinely have to be strict,
     strict.
-  problem_heading: The problem this is solving
+  problem_heading: The Problem
   problem_body: >-
     Evaluating vendor bids against several weighted requirements takes
     time to do properly, and the result can end up shaped by whichever bid
@@ -200,7 +200,7 @@
     treated as just another point on a scorecard. Price comparisons are
     also hard to judge fairly without knowing what similar work actually
     costs elsewhere.
-  solution_heading: What we built
+  solution_heading: What We Built
   solution_body: >-
     A proof of concept that takes an evaluation brief, meaning what the
     business needs and how much each requirement matters, and works
@@ -215,32 +215,32 @@
     the rest of the bid looks. A person reviews and approves the
     shortlist before it is treated as final.
   how_it_works:
-    - title: Understand the priorities
+    - title: Understand the Priorities
       body: >-
         The system reads the evaluation brief and works out what matters
         most for this particular decision.
-    - title: Check real market pricing
+    - title: Check Real Market Pricing
       body: >-
         It pulls comparable pricing from public UK government tender
         records, so the numbers in each bid have genuine context.
-    - title: Score each vendor
+    - title: Score Each Vendor
       body: >-
         Every vendor bid is scored against the stated requirements, using
         the priorities set out in the brief.
-    - title: Rank with a fixed calculation
+    - title: Rank With a Fixed Calculation
       body: >-
         Vendors are ranked using a fixed, checkable calculation rather
         than a judgment call, so the same requirements and priorities
         produce the same result every time.
-    - title: Draft the report
+    - title: Draft the Report
       body: >-
         A shortlist report is prepared, showing how each vendor scored and
         why.
-    - title: Human review
+    - title: Human Review
       body: >-
         A procurement manager reviews the shortlist and approves it before
         it is treated as a decision.
-  safeguards_heading: How we kept it honest
+  safeguards_heading: How We Kept It Honest
   safeguards_body: >-
     The most important safeguard here has nothing to do with AI at all.
     The mandatory requirement check and the final ranking calculation are

@@ -35,10 +35,4 @@ permalink: /technology/
   </div>
 </section>
 
-<section class="cta-band">
-  <div class="container">
-    <h2>{{ site.cta.heading }}</h2>
-    <p>{{ site.cta.body }}</p>
-    <a class="btn btn-primary" href="{{ site.cta.button_url }}">{{ site.cta.button_label }}</a>
-  </div>
-</section>
+{% include "partials/cta-band.njk" %}

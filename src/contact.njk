@@ -6,19 +6,19 @@ permalink: /contact/
 ---
 <section class="page-hero">
   <div class="container">
-    <h1>Let's talk about your data.</h1>
+    <h1>{{ site.cta.heading }}</h1>
     <p>{{ site.cta.body }}</p>
   </div>
 </section>
 
 <section>
   <div class="container" style="max-width: 560px;">
-    <div class="card">
-      <h3>Email</h3>
+    <div class="card contact-card">
+      <h3>{{ site.labels.email }}</h3>
       <p><a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></p>
-      <h3>LinkedIn</h3>
+      <h3>{{ site.labels.linkedin }}</h3>
       <p><a href="{{ site.contact.linkedin }}">{{ site.contact.linkedin }}</a></p>
-      <h3>Based in</h3>
+      <h3>{{ site.labels.based_in }}</h3>
       <p>{{ site.footer.location }}</p>
     </div>
   </div>

@@ -1,34 +1,32 @@
-hero_heading: Technology we work with
+hero_heading: Technology We Work With
 hero_body: >-
-  We're not tied to one vendor, we pick whatever stack actually fits your
-  business. These are the tools we reach for most often.
+  We are vendor independent and select the stack that best fits each
+  client. These are the platforms we work with most often.
 
 stack:
   - name: Databricks
     logos:
       - /assets/tech/databricks.svg
     blurb: >-
-      Our default choice for the lakehouse when a client needs data
-      engineering, analytics, and AI to live in one place. If your
-      platform already runs on Databricks, we'll feel right at home.
+      Our preferred lakehouse platform when data engineering, analytics,
+      and AI need to live in one place. We bring certified expertise to
+      teams already running on Databricks.
   - name: Microsoft Fabric & Power BI
     logos:
       - /assets/tech/microsoft.svg
       - /assets/tech/powerbi.svg
     blurb: >-
-      For teams already living in the Microsoft world, we build on Fabric
-      and Power BI so reporting and data engineering sit under one roof,
-      and nobody has to learn five new tools at once.
+      For organisations invested in the Microsoft ecosystem, we build on
+      Fabric and Power BI so reporting and data engineering sit on a
+      single, familiar platform.
   - name: Anthropic Claude
     logos:
       - /assets/tech/anthropic.svg
     blurb: >-
-      Our go to model family for building AI assistants and agents that
-      need to actually reason about your data, not just autocomplete a
-      sentence.
-  - name: Custom & open source tooling
+      Our preferred model family for AI assistants and agents that need to
+      reason carefully over your data and documents.
+  - name: Open Source & Custom Tooling
     icon: custom
     blurb: >-
-      Python, dbt, Airflow, and whatever else genuinely fits the job.
-      We're not precious about tools, we use what solves your problem
-      best.
+      Python, dbt, Airflow, and other proven tools, selected on merit for
+      each engagement.

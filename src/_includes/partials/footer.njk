@@ -6,14 +6,14 @@
       <p>{{ site.footer.tagline }}</p>
     </div>
     <div>
-      <h3>Contact</h3>
+      <h3>{{ site.footer.contact_heading }}</h3>
       <p>
         <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a><br>
-        <a href="{{ site.contact.linkedin }}">LinkedIn</a>
+        <a href="{{ site.contact.linkedin }}">{{ site.labels.linkedin }}</a>
       </p>
     </div>
     <div>
-      <h3>Explore</h3>
+      <h3>{{ site.footer.explore_heading }}</h3>
       <ul class="footer-links">
         {% for item in site.nav %}
           {% if item.url %}
@@ -24,6 +24,7 @@
             {% endfor %}
           {% endif %}
         {% endfor %}
+        <li><a href="{{ site.nav_cta.url }}">{{ site.nav_cta.label }}</a></li>
       </ul>
     </div>
     <p class="footer-copyright">© {{ currentYear }} {{ site.footer.copyright_holder }} · {{ site.footer.location }}</p>

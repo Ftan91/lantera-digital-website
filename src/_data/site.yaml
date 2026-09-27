@@ -1,14 +1,14 @@
 name: Lantera Digital
-tagline: Malaysia's data and AI consultancy
+tagline: Data and AI consultancy
 description: >-
-  Lantera Digital helps teams turn messy data into decisions that actually
-  make sense, through proper training, solid data platforms, and AI that
-  works in the real world.
+  Lantera Digital is a Malaysian data and AI consultancy helping
+  organisations turn data into decisions they can trust, through
+  practical training, modern data platforms, and applied AI.
 
 nav:
   - label: Home
     url: /
-  - label: Our Services
+  - label: Services
     dropdown:
       - label: Data & AI Training
         url: /services/training/
@@ -22,24 +22,59 @@ nav:
     url: /case-studies/
   - label: About
     url: /about/
-  - label: Contact
-    url: /contact/
+
+# The single call to action button shown at the right of the nav.
+nav_cta:
+  label: Get in Touch
+  url: /contact/
 
 footer:
-  tagline: Lighting the way from data to decisions, one project at a time.
+  tagline: Lighting the way from data to decisions.
   copyright_holder: Lantera Digital
   location: Kuala Lumpur, Malaysia
+  contact_heading: Contact
+  explore_heading: Explore
 
 contact:
   email: hello@lanteradigital.com
   linkedin: https://www.linkedin.com/company/lantera-digital
   whatsapp_number: "447714014331"
-  whatsapp_message: "Hi! I'd like to find out more about Lantera Digital's services."
+  whatsapp_message: "Hello, I would like to learn more about Lantera Digital's services."
 
 cta:
-  heading: Let's talk about your data.
+  heading: Let's Talk About Your Data
   body: >-
-    Tell us where you're stuck, training, platform, or AI lah, and we'll
-    give you a straight answer. No sales fluff, promise.
-  button_label: Get in touch
+    Whether you are building skills, modernising a platform, or exploring
+    AI, we will give you a clear and candid view of the right next step.
+  button_label: Get in Touch
   button_url: /contact/
+
+# Small pieces of shared wording used across page templates.
+labels:
+  learn_more: Learn More
+  read_write_up: Read the Write Up
+  linkedin: LinkedIn
+  email: Email
+  based_in: Based In
+
+# Wording for the /services/ hub and the shared sections on each service page.
+services_page:
+  hub_heading: Our Services
+  hub_body: >-
+    Three practice areas with one goal: helping your organisation get
+    lasting value from data and AI.
+  who_its_for_heading: Who It's For
+  offerings_heading: What's Included
+  approach_heading: Our Approach
+  outcomes_heading: What You Get
+  use_cases_heading: Use Cases We've Explored
+  use_cases_intro: >-
+    Proof of concept builds that test what applied AI can responsibly
+    deliver across different industries. Each is a full write up of the
+    problem, the build, and the safeguards.
+
+# Wording shared by every AI use case write up page.
+use_case_page:
+  eyebrow_suffix: Proof of Concept
+  how_it_works_heading: How It Works
+  outcomes_heading: What This Showed Us

@@ -28,7 +28,7 @@ permalink: /about/
 <section>
   <div class="container">
     <div class="section-heading">
-      <h2>What we value</h2>
+      <h2>{{ about.principles_heading }}</h2>
     </div>
     <div class="grid">
       {% for principle in about.principles %}
@@ -62,10 +62,4 @@ permalink: /about/
   </div>
 </section>
 
-<section class="cta-band">
-  <div class="container">
-    <h2>{{ site.cta.heading }}</h2>
-    <p>{{ site.cta.body }}</p>
-    <a class="btn btn-primary" href="{{ site.cta.button_url }}">{{ site.cta.button_label }}</a>
-  </div>
-</section>
+{% include "partials/cta-band.njk" %}

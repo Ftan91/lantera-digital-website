@@ -1,37 +1,33 @@
 hero_heading: About Lantera Digital
 hero_body: >-
-  We're a data and AI consultancy based in Malaysia, working with
-  organisations who want real value from their data, not another slide
-  deck about digital transformation.
+  We are a data and AI consultancy based in Malaysia, working with
+  organisations that want measurable value from their data.
 
-mission_heading: Why the name Lantera
+mission_heading: Why the Name Lantera
 mission_body: >-
-  A lantera is a lantern, something that lights the way instead of just
-  producing light for the sake of it. That's how we think about data and
-  AI too, tools that should make the road ahead clearer for the people
-  actually making the decisions.
+  A lantera is a lantern, a light that shows the way forward. That is how
+  we see data and AI: tools that should bring clarity to the people making
+  decisions.
 
-approach_heading: How we think about consulting
+approach_heading: Our Approach to Consulting
 approach_body: >-
-  We're wary of consultancies that leave a client more dependent on them
-  than before. Every engagement, training, platform, or AI, is built so
-  your team understands and can own what we deliver. We'd rather do fewer
-  things properly and hand them over cleanly than sell you more than you
-  need.
+  Every engagement, whether training, platform, or AI, is designed so your
+  team understands and owns what we deliver. We focus on doing fewer things
+  well, handing them over cleanly, and recommending only the work you need.
 
+principles_heading: What We Value
 principles:
-  - title: Outcomes over output
-    body: We measure success by the decisions our work actually enables, not the number of slides in the final deck.
-  - title: Regional context
-    body: We understand the data maturity, talent market, and business context of working in Malaysia and the wider region, because we live here too.
-  - title: No vendor bias
-    body: We recommend whatever platform or approach actually fits you, not whichever one we get a kickback for selling.
+  - title: Outcomes Over Output
+    body: We measure success by the decisions our work enables for your organisation.
+  - title: Regional Context
+    body: We understand the data maturity, talent market, and business environment in Malaysia and across the region, because this is where we live and work.
+  - title: Vendor Independence
+    body: We recommend the platform and approach that best fit your needs, with no commercial ties to any vendor.
 
-founders_heading: Who's behind it
+founders_heading: Leadership
 founders_intro: >-
-  Two engineering directors, one based in Kuala Lumpur and one in London,
-  who got tired of seeing data projects go nowhere and decided to fix
-  that themselves.
+  Lantera Digital is led by two engineering directors, based in Kuala
+  Lumpur and London, with deep experience delivering data and AI work.
 
 founders:
   - name: Finn Tan Wee Lip
@@ -39,24 +35,21 @@ founders:
     linkedin: https://www.linkedin.com/in/finn-tan-wee-lip-4b773084/
     photo: /assets/founders/finn.jpeg
     bio: >-
-      Finn is a data engineer originally from Malaysia, now based in
-      London, where he's spent years building data platforms and picking
-      up a small mountain of Databricks certifications along the way.
-      He's worked on modern data engineering at UBDS Group, speaks
-      regularly at data community events, and still finds time to explain
-      Spark to people at conferences. Bilingual in English and Malay, he
-      brings a very hands on, no nonsense approach to how Lantera Digital
-      builds things.
+      Finn is a data engineer from Malaysia, now based in London, with
+      years of experience designing and building modern data platforms. He
+      holds multiple Databricks certifications, has delivered data
+      engineering work at UBDS Group, and speaks regularly at data community
+      events. Bilingual in English and Malay, Finn leads Lantera Digital's
+      hands on approach to platform delivery.
   - name: Irfan Noordin
     title: Engineering Director & Co-Founder
     linkedin: https://www.linkedin.com/in/irfan-noordin/
     photo: /assets/founders/irfan.jpeg
     bio: >-
       Irfan is a data scientist based in Kuala Lumpur with an engineering
-      background from McMaster University. He's worked on digital
+      background from McMaster University. He has worked on digital
       transformation at Sime Darby Plantation and SD Guthrie Berhad,
       previously served as Dean at School of AI Kuala Lumpur teaching
-      machine learning to anyone willing to sit through his slides, and
-      helps organise the Data Council community here. He's the one making
-      sure Lantera Digital's AI work actually makes sense for how
+      machine learning, and helps organise the Data Council community in
+      Malaysia. Irfan ensures Lantera Digital's AI work is grounded in how
       Malaysian businesses operate.

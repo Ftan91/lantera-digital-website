@@ -6,16 +6,20 @@
   <title>{% if title %}{{ title }} | {% endif %}{{ site.name }}</title>
   <meta name="description" content="{{ description or site.description }}">
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-  <!-- Must run inline, before the stylesheet paints, or returning light-mode visitors see a flash of dark mode. -->
+  <!-- Must run inline, before the stylesheet paints, or returning dark-mode visitors see a flash of light mode. -->
   <script>
     (function () {
       try {
-        if (localStorage.getItem("lantera-theme") === "light") {
-          document.documentElement.setAttribute("data-theme", "light");
+        if (localStorage.getItem("lantera-theme") === "dark") {
+          document.documentElement.setAttribute("data-theme", "dark");
         }
       } catch (e) {}
     })();
   </script>
+  <!-- Newsreader is the serif used for headings; everything else uses the system sans font. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap">
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>

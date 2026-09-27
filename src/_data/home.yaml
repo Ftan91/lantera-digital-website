@@ -1,37 +1,34 @@
 hero:
-  heading: Turn your data into decisions you can actually trust.
+  heading: Turn Your Data Into Decisions You Can Trust
   subheading: >-
-    Lantera Digital is a Malaysian data and AI consultancy. We train your
-    people, build your data platform, and deliver AI that solves real
-    problems, start to finish.
+    Lantera Digital is a data and AI consultancy based in Kuala Lumpur.
+    We train teams, build data platforms, and deliver applied AI for
+    organisations across Malaysia and the region.
   primary_cta:
-    label: See our services
+    label: Explore Our Services
     url: /services/
   secondary_cta:
-    label: Talk to us
+    label: Get in Touch
     url: /contact/
 
-intro: >-
-  Not sure where to start? Our services are up in the menu bar, have a
-  look and pick whichever one matches your current headache.
-
+differentiators_heading: Why Lantera Digital
 differentiators:
-  - title: We actually get our hands dirty
-    body: Every project runs on your real data and your real tools. No generic slideshows, no textbook case studies.
-  - title: We build it so you can run it
-    body: Everything comes with proper documentation and training, so your team owns it once we're done, not us.
-  - title: Straight talk, always
-    body: If AI or some flashy new platform isn't right for you, we'll say so before you spend a single ringgit on it.
-  - title: Malaysian, and we know the region
-    body: We're based here, we understand the market here, and honestly, we reply to emails fast too.
+  - title: Built on Your Real Data
+    body: Every engagement runs on your own data, systems, and tools, so the results hold up in production.
+  - title: Designed for Handover
+    body: Documentation and training are part of every delivery, so your team owns and operates what we build.
+  - title: Candid Advice
+    body: If a platform or an AI approach is the wrong fit for you, we say so before any budget is committed.
+  - title: Regional Expertise
+    body: We are based in Malaysia and understand the regulatory, talent, and business landscape of the region.
 
-approach_heading: How we work
+approach_heading: How We Work
 approach:
-  - title: Understand
-    body: We sit down, ask a lot of questions, and figure out what's really going on with your data.
-  - title: Scope honestly
-    body: A clear plan and a price that matches what you actually need, no bloated proposals.
-  - title: Build alongside you
-    body: Your team works with us the whole way, so nothing feels like a black box handed down from above.
-  - title: Hand over
-    body: We write it down properly and train your people, so everything keeps running long after we're gone.
+  - title: Discover
+    body: We start by understanding your objectives, your data, and the constraints you operate within.
+  - title: Scope
+    body: A clear plan with defined deliverables and a price that reflects what you need.
+  - title: Build Together
+    body: Your team works alongside ours throughout, with full visibility at every stage.
+  - title: Hand Over
+    body: Complete documentation and training keep everything running long after the engagement ends.
