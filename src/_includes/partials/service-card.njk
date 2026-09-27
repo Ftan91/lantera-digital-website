@@ -1,6 +1,5 @@
-<div class="card">
-  {% include "partials/service-icon.njk" %}
+<div class="feature-card textured tone-{{ service.tone }}">
   <h3>{{ service.name }}</h3>
   <p>{{ service.summary }}</p>
-  <a class="card-link" href="/services/{{ service.slug }}/">{{ site.labels.learn_more }} →</a>
+  <a class="btn btn-secondary btn-small" href="/services/{{ service.slug }}/">{{ site.labels.learn_more }}</a>
 </div>

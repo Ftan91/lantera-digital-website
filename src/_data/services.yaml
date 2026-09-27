@@ -5,6 +5,7 @@
     Hands on training that builds lasting data and AI capability across
     your team.
   icon: training
+  tone: slate
   hero_heading: Build a Team That Works Confidently With Data and AI
   hero_body: >-
     Practical, instructor led programmes for analysts, engineers, and
@@ -39,6 +40,7 @@
     Reliable, well governed data platforms, built with your team and
     handed over in full.
   icon: platform
+  tone: velvet
   hero_heading: Data Platforms Built for Ownership
   hero_body: >-
     We design and build data platforms, pipelines, warehousing, and
@@ -74,6 +76,7 @@
     Applied AI built around a defined business problem, from initial
     scoping to production.
   icon: ai
+  tone: bronze
   hero_heading: Applied AI, From Scoping to Production
   hero_body: >-
     We take AI initiatives from an initial idea to a working system,

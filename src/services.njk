@@ -9,7 +9,7 @@ eleventyComputed:
   title: "{{ service.name }}"
   description: "{{ service.summary }}"
 ---
-<section class="page-hero">
+<section class="page-hero textured tone-{{ service.tone }}">
   <div class="container">
     {% set iconSize = "large" %}
     {% include "partials/service-icon.njk" %}
