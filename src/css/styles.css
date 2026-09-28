@@ -1,7 +1,7 @@
 /* ---------- Design tokens ---------- */
 /* Warm monochrome palette modelled on harvey.ai: ivory paper, near black
    ink, warm greys, and no bright UI accent. The only colour on the page is
-   the amber flame in the logo itself.
+   the amber flame in the logo.
 
    Light is the default theme (bare :root). Dark is the opt in override,
    the toggle sets data-theme="dark" on <html> and stores that choice in
@@ -21,11 +21,6 @@
   --color-inverse-text: #fafaf9;
   --color-inverse-muted: #adaba5;
   --color-inverse-border: #33312c;
-
-  /* Logo wordmark. The flame is fixed amber; the text darkens in light
-     mode so it stays legible on ivory. */
-  --color-logo-primary: #0f0e0d;
-  --color-logo-secondary: #66716a;
 
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
@@ -49,9 +44,6 @@
   --color-text-muted: #adaba5;
   --color-border: #33312c;
   --color-border-strong: #524f49;
-
-  --color-logo-primary: #f4efe5;
-  --color-logo-secondary: #b9c0b8;
 
   /* Lifted slightly so the ink bands still read as separate sections. */
   --color-inverse-bg: #1f1d1a;
@@ -133,6 +125,7 @@ section.soft { background: var(--color-bg-soft); }
   font-weight: 500;
   font-size: 0.95rem;
   text-decoration: none;
+  white-space: nowrap;
   transition: opacity 0.15s ease, border-color 0.15s ease;
 }
 
@@ -182,29 +175,20 @@ section.soft { background: var(--color-bg-soft); }
 }
 
 /* Never let the flex row squeeze the logo to nothing on a narrow header. */
-.logo { flex-shrink: 0; text-decoration: none; }
+.logo { flex-shrink: 0; display: flex; align-items: center; text-decoration: none; }
 
-/* Flame icon plus live text wordmark (partials/logo-mark.njk): "Lantera"
-   in bold serif, "Digital" in italic serif. Sized by font-size alone. */
-.logo-mark {
-  display: inline-flex;
-  align-items: center;
-  font-family: var(--font-serif);
-  font-size: 1.65rem;
-  line-height: 1;
-  letter-spacing: -0.01em;
-  white-space: nowrap;
-}
-.logo-flame { width: 0.68em; height: auto; margin-right: 0.28em; transform: translateY(-0.06em); }
-.logo-primary { font-weight: 700; color: var(--color-logo-primary); }
-.logo-secondary { font-style: italic; font-weight: 500; color: var(--color-logo-secondary); }
-
-/* The footer is always dark, so it always uses the dark theme logo colours. */
-.footer-logo .logo-mark {
-  --color-logo-primary: #f4efe5;
-  --color-logo-secondary: #b9c0b8;
-  font-size: 1.45rem;
-}
+/* The logo is two images of the same artwork (partials/logo-mark.njk):
+   dark text for light mode, original ivory text for dark mode and the
+   always dark footer. Sized by height; the width follows. */
+.logo-mark { display: block; }
+.logo-mark img { height: 36px; width: auto; }
+.logo-on-light { display: block; }
+.logo-on-dark { display: none; }
+:root[data-theme="dark"] .logo-on-light,
+.footer-logo .logo-on-light { display: none; }
+:root[data-theme="dark"] .logo-on-dark,
+.footer-logo .logo-on-dark { display: block; }
+.footer-logo .logo-mark img { height: 30px; }
 
 .nav-links {
   display: flex;
@@ -602,13 +586,47 @@ section.soft { background: var(--color-bg-soft); }
   background: #20bd5a;
 }
 
-/* ---------- Small screens ---------- */
+/* ---------- Smaller screens ---------- */
+/* Keep the header on one line by tightening the gaps first. */
+@media (max-width: 1100px) {
+  .nav-right, .nav-links { gap: 1.1rem; }
+}
+
+/* Then split it into two rows: logo, theme toggle and button on top, the
+   links on a single row underneath. display: contents lets the nav,
+   toggle and button be laid out directly by the header's flex row. */
+@media (max-width: 900px) {
+  .site-header .container { flex-wrap: wrap; row-gap: 0.6rem; }
+  .nav-right { display: contents; }
+  .theme-toggle { margin-left: auto; }
+  .nav-right nav { order: 3; width: 100%; }
+  .nav-links { flex-wrap: nowrap; gap: 1.1rem; }
+}
+
 @media (max-width: 760px) {
   :root { --space-xl: 4rem; }
-  .site-header .container { flex-wrap: wrap; gap: var(--space-sm); }
-  .nav-right { width: 100%; flex-wrap: wrap; gap: var(--space-sm); }
-  .nav-right nav { width: 100%; }
-  .nav-links { gap: var(--space-xs) var(--space-md); }
+  /* The logo already links home, so drop "Home" to keep the links on one row. */
+  .nav-links > li:first-child { display: none; }
+  .nav-links a, .nav-dropdown summary { font-size: 0.875rem; white-space: nowrap; }
   .hero { padding: 4rem 0 3rem; }
   .hero-large { padding: 5rem 0 4rem; }
+}
+
+/* Phones: slightly smaller logo, button and side padding so the top row
+   (logo, toggle, button) still fits on one line at 360px. */
+@media (max-width: 480px) {
+  .container { padding: 0 1rem; }
+  .site-header .container { column-gap: 0.5rem; }
+  .logo-mark img { height: 25px; }
+  .site-header .btn-small { padding: 0.45rem 0.75rem; font-size: 0.8rem; }
+  .nav-links { gap: 0.9rem; }
+}
+
+/* Very small (320px) phones. */
+@media (max-width: 350px) {
+  .logo-mark img { height: 22px; }
+  .site-header .container { column-gap: 0.4rem; }
+  .site-header .btn-small { padding: 0.4rem 0.6rem; font-size: 0.75rem; }
+  .nav-links { gap: 0.7rem; }
+  .nav-links a, .nav-dropdown summary { font-size: 0.8rem; }
 }
