@@ -1,7 +1,7 @@
 /* ---------- Design tokens ---------- */
 /* Warm monochrome palette modelled on harvey.ai: ivory paper, near black
    ink, warm greys, and no bright UI accent. The only colour on the page is
-   the amber glow in the logo itself.
+   the amber flame in the logo itself.
 
    Light is the default theme (bare :root). Dark is the opt in override,
    the toggle sets data-theme="dark" on <html> and stores that choice in
@@ -21,6 +21,11 @@
   --color-inverse-text: #fafaf9;
   --color-inverse-muted: #adaba5;
   --color-inverse-border: #33312c;
+
+  /* Logo wordmark. The flame is fixed amber; the text darkens in light
+     mode so it stays legible on ivory. */
+  --color-logo-primary: #0f0e0d;
+  --color-logo-secondary: #66716a;
 
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
@@ -44,6 +49,9 @@
   --color-text-muted: #adaba5;
   --color-border: #33312c;
   --color-border-strong: #524f49;
+
+  --color-logo-primary: #f4efe5;
+  --color-logo-secondary: #b9c0b8;
 
   /* Lifted slightly so the ink bands still read as separate sections. */
   --color-inverse-bg: #1f1d1a;
@@ -174,16 +182,29 @@ section.soft { background: var(--color-bg-soft); }
 }
 
 /* Never let the flex row squeeze the logo to nothing on a narrow header. */
-.logo { flex-shrink: 0; }
+.logo { flex-shrink: 0; text-decoration: none; }
 
-/* logo-mark.njk is inlined (not an <img>) so its dark strokes/fills can
-   use currentColor and follow the text colour into dark mode, and onto
-   the ink footer. width/height attributes on the <svg> itself (in the
-   partial) give it an unambiguous intrinsic size so these CSS values
-   reliably win everywhere. */
-.logo-mark { display: block; height: 38px; width: auto; color: var(--color-text); }
+/* Flame icon plus live text wordmark (partials/logo-mark.njk): "Lantera"
+   in bold serif, "Digital" in italic serif. Sized by font-size alone. */
+.logo-mark {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-serif);
+  font-size: 1.65rem;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+.logo-flame { width: 0.68em; height: auto; margin-right: 0.28em; transform: translateY(-0.06em); }
+.logo-primary { font-weight: 700; color: var(--color-logo-primary); }
+.logo-secondary { font-style: italic; font-weight: 500; color: var(--color-logo-secondary); }
 
-.footer-logo .logo-mark { height: 32px; width: auto; color: var(--color-inverse-text); }
+/* The footer is always dark, so it always uses the dark theme logo colours. */
+.footer-logo .logo-mark {
+  --color-logo-primary: #f4efe5;
+  --color-logo-secondary: #b9c0b8;
+  font-size: 1.45rem;
+}
 
 .nav-links {
   display: flex;
