@@ -1,103 +1,107 @@
 - slug: training
   name: Data & AI Training
   summary: >-
-    Hands on training that builds lasting data and AI capability across
-    your team.
+    Practical courses that teach your staff to work confidently with data
+    and AI tools.
   icon: training
   tone: slate
-  hero_heading: Build a Team That Works Confidently With Data and AI
+  hero_heading: Help Your Team Work Confidently With Data and AI
   hero_body: >-
-    Practical, instructor led programmes for analysts, engineers, and
-    leaders, designed around your own data, tools, and workflows.
+    We run practical training for everyone from analysts to senior leaders.
+    Courses use your own data and tools, so people can apply what they
+    learn at work straight away.
   who_its_for: >-
-    Organisations that want their people to be genuinely capable with data
-    and AI, from teams writing their first SQL queries to engineers
-    adopting a new platform.
+    Any organisation that wants its staff to make better use of data and
+    AI. We teach complete beginners writing their first database query, as
+    well as experienced engineers learning a new platform.
   offerings:
-    - title: Data Fundamentals
-      body: SQL, data modelling, and analytical thinking for teams building their foundations.
-    - title: AI and LLM Literacy
-      body: Practical workshops on using AI tools effectively, safely, and responsibly at work.
-    - title: Platform Upskilling
-      body: Targeted training on the platforms your team already runs, including Databricks and Microsoft Fabric.
+    - title: Data Basics
+      body: How to find, query and analyse data, including SQL (the standard language for working with databases), for teams getting started.
+    - title: Using AI at Work
+      body: Hands on workshops on using AI assistants such as ChatGPT and Claude productively and safely, including what to avoid.
+    - title: Platform Training
+      body: In depth training on the data platforms your team uses, including Databricks and Microsoft Fabric.
   approach:
     - title: Assess
-      body: We establish a clear baseline of your team's current skills and goals.
+      body: We find out what your team already knows and what they need to learn.
     - title: Tailor
-      body: Course content is built around your own data and workflows for immediate relevance.
+      body: We build the course around your own data and day to day tasks.
     - title: Deliver
-      body: Hands on sessions in which every participant builds something real.
+      body: Practical sessions in which every participant builds something they can use.
   outcomes:
-    - A team that works with data confidently and independently
-    - Training materials your team keeps and can reuse
-    - A clear view of remaining skill gaps and how to close them
+    - Staff who can work with data without relying on outside help
+    - Course materials your team keeps and can refer back to
+    - A clear picture of any remaining skill gaps and how to close them
 
 - slug: data-platform
   name: Data Platform Services
   summary: >-
-    Reliable, well governed data platforms, built with your team and
-    handed over in full.
+    We bring your business data together in one reliable place, so your
+    reports and decisions are based on accurate, up to date figures.
   icon: platform
   tone: velvet
-  hero_heading: Data Platforms Built for Ownership
+  hero_heading: One Reliable Home for Your Business Data
   hero_body: >-
-    We design and build data platforms, pipelines, warehousing, and
-    governance, with your team involved from day one so the platform is
-    fully yours at handover.
+    Most organisations have data spread across spreadsheets and separate
+    systems, which makes reporting slow and numbers hard to trust. We build
+    a central system, called a data platform, that collects, cleans and
+    organises that data automatically.
   who_its_for: >-
-    Organisations that need a dependable data foundation, whether
-    consolidating spreadsheets and disconnected systems or modernising an
-    existing platform.
+    Organisations whose reports take too long to produce, whose figures do
+    not match between departments, or whose current data setup has become
+    hard to manage.
   offerings:
-    - title: Platform Architecture
-      body: An architecture sized to your scale, budget, and plans for growth.
-    - title: Pipelines and Integration
-      body: Reliable pipelines that bring together and shape data from your source systems.
-    - title: Governance and Quality
-      body: Practical data quality, access control, and governance that keep pace with your team.
+    - title: Platform Design
+      body: We design a setup that suits your size, budget and future plans.
+    - title: Automated Data Feeds
+      body: We connect your existing systems, such as sales, finance and operations, so their data flows into the platform automatically.
+    - title: Data Quality and Security
+      body: Checks that keep the data accurate, and controls over who can see what.
   approach:
-    - title: Audit
-      body: We map your current data landscape and identify where it costs you time or trust.
+    - title: Review
+      body: We look at how your data is stored and used today, and where it causes problems.
     - title: Design
-      body: An architecture matched precisely to your requirements.
+      body: We propose a setup that fits your needs and budget.
     - title: Build and Hand Over
-      body: We build alongside your team and document everything for long term ownership.
+      body: We build it with your team and document how everything works.
   outcomes:
-    - A platform your team understands and can maintain
-    - Faster, more reliable access to data across the business
-    - Complete documentation, with knowledge shared across the team
+    - Reports that are faster to produce, with figures everyone agrees on
+    - A platform your own team understands and can maintain
+    - Full documentation, so the knowledge is not held by one person
 
 - slug: ai-offerings
   name: AI Offerings
   summary: >-
-    Applied AI built around a defined business problem, from initial
-    scoping to production.
+    We build AI tools that take on specific, time consuming tasks in your
+    business, and test them carefully before they go live.
   icon: ai
   tone: bronze
-  hero_heading: Applied AI, From Scoping to Production
+  hero_heading: AI That Solves a Real Business Problem
   hero_body: >-
-    We take AI initiatives from an initial idea to a working system,
-    scoped rigorously, built responsibly, and measured against the
-    outcomes that matter to your business.
+    We start with a task that costs your team time, such as answering
+    routine customer questions or reviewing documents, and build an AI
+    tool to help with it. We test it on your own data first and only put
+    it into daily use once it has proved reliable.
   who_its_for: >-
-    Teams with a specific challenge in mind, such as forecasting, process
-    automation, search, document understanding, or a custom AI assistant,
-    who value a partner that will also advise when AI is the wrong tool.
+    Organisations with a specific task in mind that AI might help with,
+    such as forecasting, handling routine enquiries, searching documents or
+    pulling information out of paperwork. We will also tell you if a
+    simpler solution would do the job better.
   offerings:
-    - title: Use Case Scoping
-      body: A rigorous assessment of whether AI is the right approach and how success will be measured.
-    - title: Proof of Concept
-      body: A focused build that validates feasibility before significant investment.
-    - title: Production AI Systems
-      body: Taking a validated concept to a reliable, monitored system your team can operate.
-  approach:
-    - title: Scope
-      body: We define the problem and the success criteria before any code is written.
+    - title: Assessment
+      body: We look at the task and tell you whether AI is a good fit, and how we would measure success.
     - title: Prototype
-      body: A working proof of concept, tested against your own data.
-    - title: Productionise
-      body: Hardening, monitoring, and handover so the system performs reliably over time.
+      body: A small working version, tested on your data, so you can see results before committing a larger budget.
+    - title: Full Build
+      body: We turn a successful prototype into a dependable tool your team uses every day, with monitoring in place.
+  approach:
+    - title: Define
+      body: We agree on the problem and what success looks like before building anything.
+    - title: Test
+      body: We build a prototype and try it on your real data.
+    - title: Launch
+      body: We prepare it for daily use, set up monitoring and train your team to run it.
   outcomes:
-    - A working AI system tied to a measurable business outcome
-    - Clarity on where AI creates value for your organisation, and where it does not
-    - A system your team can monitor and maintain independently
+    - An AI tool that saves measurable time or effort
+    - An honest view of where AI helps your organisation and where it does not
+    - A system your team can monitor and maintain themselves

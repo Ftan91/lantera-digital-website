@@ -1,8 +1,8 @@
 name: Lantera Digital
 description: >-
-  Lantera Digital is a Malaysian data and AI consultancy helping
-  organisations turn data into decisions they can trust, through
-  practical training, modern data platforms, and applied AI.
+  Lantera Digital is a data and AI consultancy in Kuala Lumpur. We help
+  organisations get their data in order, train their people to use it,
+  and build practical AI tools that save time.
 
 nav:
   - label: Home
@@ -43,15 +43,15 @@ contact:
 cta:
   heading: Let's Talk About Your Data
   body: >-
-    Whether you are building skills, modernising a platform, or exploring
-    AI, we will give you a clear and candid view of the right next step.
+    Tell us what you are working on and where you are stuck. We will give
+    you an honest view of what would help and what it would involve.
   button_label: Get in Touch
   button_url: /contact/
 
 # Small pieces of shared wording used across page templates.
 labels:
   learn_more: Learn More
-  read_write_up: Read the Write Up
+  read_write_up: Read More
   linkedin: LinkedIn
   email: Email
   based_in: Based In
@@ -60,20 +60,20 @@ labels:
 services_page:
   hub_heading: Our Services
   hub_body: >-
-    Three practice areas with one goal: helping your organisation get
-    lasting value from data and AI.
+    We help in three ways. You can work with us on one of them or combine
+    them, depending on where you are starting from.
   who_its_for_heading: Who It's For
   offerings_heading: What's Included
   approach_heading: Our Approach
   outcomes_heading: What You Get
-  use_cases_heading: Use Cases We've Explored
+  use_cases_heading: Examples of Our AI Work
   use_cases_intro: >-
-    Proof of concept builds that test what applied AI can responsibly
-    deliver across different industries. Each is a full write up of the
-    problem, the build, and the safeguards.
+    These are prototypes we built to test what AI can safely do in real
+    business settings. Each one explains the problem, how the system works,
+    and the checks we put in place.
 
 # Wording shared by every AI use case write up page.
 use_case_page:
-  eyebrow_suffix: Proof of Concept
+  eyebrow_suffix: Prototype
   how_it_works_heading: How It Works
-  outcomes_heading: What This Showed Us
+  outcomes_heading: What We Learned

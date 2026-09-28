@@ -1,9 +1,9 @@
 hero:
   heading: Turn Your Data Into Decisions You Can Trust
   subheading: >-
-    Lantera Digital is a data and AI consultancy based in Kuala Lumpur.
-    We train teams, build data platforms, and deliver applied AI for
-    organisations across Malaysia and the region.
+    We are a data and AI consultancy in Kuala Lumpur. We organise your
+    business data so it is reliable and easy to use, train your team to
+    work with it, and build AI tools that take on time consuming work.
   primary_cta:
     label: Explore Our Services
     url: /services/
@@ -11,24 +11,24 @@ hero:
     label: Get in Touch
     url: /contact/
 
-differentiators_heading: Why Lantera Digital
+differentiators_heading: Why Work With Us
 differentiators:
-  - title: Built on Your Real Data
-    body: Every engagement runs on your own data, systems, and tools, so the results hold up in production.
-  - title: Designed for Handover
-    body: Documentation and training are part of every delivery, so your team owns and operates what we build.
-  - title: Candid Advice
-    body: If a platform or an AI approach is the wrong fit for you, we say so before any budget is committed.
-  - title: Regional Expertise
-    body: We are based in Malaysia and understand the regulatory, talent, and business landscape of the region.
+  - title: We Work With Your Data
+    body: We use your actual systems and data from the start, so what we build is ready for everyday use.
+  - title: Your Team Can Run It
+    body: We document everything and train your staff, so you are not dependent on us once the work is done.
+  - title: Honest Advice
+    body: If a new platform or an AI project will not give you a good return, we will tell you before you spend money on it.
+  - title: Local Knowledge
+    body: We are based in Malaysia and understand the local market, regulations and talent pool.
 
 approach_heading: How We Work
 approach:
-  - title: Discover
-    body: We start by understanding your objectives, your data, and the constraints you operate within.
-  - title: Scope
-    body: A clear plan with defined deliverables and a price that reflects what you need.
-  - title: Build Together
-    body: Your team works alongside ours throughout, with full visibility at every stage.
+  - title: Understand
+    body: We learn about your business, your goals and the data you already have.
+  - title: Plan
+    body: We agree on what will be delivered, when, and at what cost, before any work begins.
+  - title: Build
+    body: We do the work alongside your team and keep you updated at every step.
   - title: Hand Over
-    body: Complete documentation and training keep everything running long after the engagement ends.
+    body: We document everything and train your staff so they can look after it themselves.
